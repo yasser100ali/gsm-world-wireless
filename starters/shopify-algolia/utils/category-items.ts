@@ -7,27 +7,27 @@ export interface CategoryItem {
 
 export const categoryItems: CategoryItem[] = [
   {
-    title: "Fashion",
-    handle: "fashion",
-    href: "/category/fashion",
-    description: "Curated styles for every occasion",
+    title: "Cell Phones",
+    handle: "cell-phones",
+    href: "/category/cell-phones",
+    description: "Smartphones, unlocked phones, and plans",
   },
   {
-    title: "Electronics",
-    handle: "electronics",
-    href: "/category/electronics",
-    description: "Latest tech and innovations",
+    title: "Computers",
+    handle: "computers",
+    href: "/category/computers",
+    description: "Laptops, desktops, monitors, and tablets",
   },
   {
-    title: "Beauty",
-    handle: "beauty",
-    href: "/category/beauty",
-    description: "Premium skincare and cosmetics",
+    title: "Accessories",
+    handle: "accessories",
+    href: "/category/accessories",
+    description: "Cases, chargers, audio, and wearables",
   },
   {
-    title: "Furniture",
-    handle: "furniture",
-    href: "/category/furniture",
-    description: "Modern designs for your space",
+    title: "About",
+    handle: "about",
+    href: "/pages/about",
+    description: "GSM World Wireless — Cypress, CA",
   },
 ]

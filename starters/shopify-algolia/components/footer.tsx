@@ -30,18 +30,18 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/category/electronics" className="transition-colors hover:text-gray-700" prefetch={false}>
-                    Electronics
+                  <Link href="/category/cell-phones" className="transition-colors hover:text-gray-700" prefetch={false}>
+                    Cell Phones
                   </Link>
                 </li>
                 <li>
-                  <Link href="/category/fashion" className="transition-colors hover:text-gray-700" prefetch={false}>
-                    Fashion
+                  <Link href="/category/computers" className="transition-colors hover:text-gray-700" prefetch={false}>
+                    Computers
                   </Link>
                 </li>
                 <li>
-                  <Link href="/category/sports-and-outdoors" className="transition-colors hover:text-gray-700" prefetch={false}>
-                  Sports &amp; Outdoors
+                  <Link href="/category/accessories" className="transition-colors hover:text-gray-700" prefetch={false}>
+                  Accessories
                   </Link>
                 </li>
               </ul>
@@ -103,7 +103,7 @@ export function Footer() {
                 <LinkedinIcon className="size-6" />
               </a>
             </div>
-            <div className="text-sm">© {new Date().getFullYear()} Blazity Enterprise Commerce.</div>
+            <div className="text-sm">© {new Date().getFullYear()} GSM World Wireless — Cypress, CA.</div>
           </div>
           <div className="mt-8 flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
             <Link

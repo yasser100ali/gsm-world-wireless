@@ -10,7 +10,7 @@ export function getDemoProducts(): {
   totalHits: number
   independentFacetDistribution: Record<string, unknown>
 } {
-  const allProducts = require("public/demo-data.json")
+  const allProducts = require("public/merchandise-data.json")
   return {
     hits: allProducts.hits as Hit<CommerceProduct>[],
     totalPages: 1,

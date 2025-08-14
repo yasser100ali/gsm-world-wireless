@@ -3,15 +3,15 @@ import { env } from "env.mjs"
 export const sharedMetadata = {
   metadataBase: new URL(env.LIVE_URL || "https://commerce.blazity.com"),
   openGraph: {
-    title: "Next.js Enterprise Commerce | Blazity",
-    description: "Enterprise-grade Shopify storefront with Algolia middle layer, built on Next.js",
+    title: "GSM World Wireless | Cypress, CA",
+    description: "Cell phones, computers, and accessories. GSM World Wireless — Cypress, CA.",
     images: ["/opengraph-image.jpg"],
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "Next.js Enterprise Commerce | Blazity",
-    description: "Enterprise-grade Shopify storefront with Algolia middle layer, built on Next.js",
-    creator: "@blazity",
+    title: "GSM World Wireless | Cypress, CA",
+    description: "Cell phones, computers, and accessories.",
+    creator: "@gsmworldwireless",
     images: ["/opengraph-image.jpg"],
   },
 }

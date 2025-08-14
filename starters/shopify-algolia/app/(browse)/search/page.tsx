@@ -5,7 +5,7 @@ import { PageSkeleton } from "components/category/page-skeleton"
 import { SearchView } from "components/search-view"
 
 export const metadata: Metadata = {
-  title: "Search | Enterprise Commerce",
+  title: "Search | GSM World Wireless",
   description: "Search for products in our store.",
 }
 

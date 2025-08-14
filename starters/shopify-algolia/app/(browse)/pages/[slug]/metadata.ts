@@ -9,7 +9,7 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
     title: page?.seo?.title || page?.title,
     description: page?.seo?.description || page?.bodySummary,
     referrer: "origin-when-cross-origin",
-    creator: "Blazity",
-    publisher: "Blazity",
+    creator: "GSM World Wireless",
+    publisher: "GSM World Wireless",
   }
 }

@@ -20,18 +20,18 @@ export async function generateMetadata({ params: { slug } }: ProductProps): Prom
   const lastCollection = product?.collections?.findLast(Boolean)
 
   return {
-    title: `${originalTitle || product?.title} | Blazity`,
+    title: `${originalTitle || product?.title} | GSM World Wireless`,
     description: originalDescription || product?.description,
     generator: "Next.js",
     applicationName: "Next.js",
     referrer: "origin-when-cross-origin",
     keywords: keywords,
     category: lastCollection ? slugToName(lastCollection.handle) : "Search",
-    creator: "Blazity",
+    creator: "GSM World Wireless",
     alternates: {
       canonical: `/product/${slug}`,
     },
-    publisher: "Blazity",
+    publisher: "GSM World Wireless",
   }
 }
 

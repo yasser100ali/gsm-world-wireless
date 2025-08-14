@@ -4,8 +4,8 @@ import {sharedMetadata} from "./shared-metadata"
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Next.js Enterprise Commerce | Blazity",
-    short_name: "Next.js Enterprise Commerce | Blazity",
+    name: "GSM World Wireless | Cypress, CA",
+    short_name: "GSM World Wireless",
     description: sharedMetadata.openGraph.description,
     start_url: "/",
     display: "standalone",

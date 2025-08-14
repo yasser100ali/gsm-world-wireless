@@ -9,7 +9,6 @@ import { ThirdParties } from "components/third-parties"
 import { Metadata } from "next"
 import { sharedMetadata } from "../shared-metadata"
 import { GithubBadge } from "components/github-badge"
-import { DemoModeAlert } from "components/demo-mode-alert"
 import { CartView } from "components/cart/cart-view"
 import { NavigationBarWrapper } from "components/navigation-bar/navigation-bar-wrapper"
 import { mobileInlineScript } from "components/navigation-bar/mobile-inline-script"
@@ -22,7 +21,7 @@ export const revalidate = 86400
 
 export const metadata: Metadata = {
   metadataBase: sharedMetadata.metadataBase,
-  title: "Next.js Enterprise Commerce | Blazity",
+  title: "GSM World Wireless | Cypress, CA",
   description: sharedMetadata.openGraph.description,
   openGraph: sharedMetadata.openGraph,
   twitter: sharedMetadata.twitter,
@@ -63,7 +62,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <ThirdParties />
 
           <GithubBadge />
-          <DemoModeAlert />
         </NuqsAdapter>
       </body>
     </html>
