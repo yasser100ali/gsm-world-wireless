@@ -7,11 +7,12 @@ interface CategoryCardProps {
   handle: string
   href: string
   description: string
+  imageUrl?: string
   index: number
   className?: string
 }
 
-export const CategoryCard = ({ title, href, description, index, className }: CategoryCardProps) => {
+export const CategoryCard = ({ title, href, description, imageUrl, index, className }: CategoryCardProps) => {
   return (
     <Link
       href={href}
@@ -23,7 +24,7 @@ export const CategoryCard = ({ title, href, description, index, className }: Cat
     >
       <div className="relative h-[200px] overflow-hidden bg-secondary/10">
         <Image
-          src={`/category-placeholder-${index + 1}.png`}
+          src={imageUrl || `/category-placeholder-${index + 1}.png`}
           alt={`${title} category`}
           className="size-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           fill

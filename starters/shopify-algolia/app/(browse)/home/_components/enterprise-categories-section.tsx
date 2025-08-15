@@ -2,7 +2,7 @@ import { getCollection } from "lib/algolia/rate-limited"
 import { EnterpriseCategoryCard } from "components/enterprise-category-card"
 import { PlatformCollection } from "lib/shopify/types"
 
-const FEATURED_CATEGORY_HANDLES = ["fashion", "electronics", "sports-and-outdoors", "furniture"]
+const FEATURED_CATEGORY_HANDLES = ["cell-phones", "computers", "accessories", "about"]
 
 export async function EnterpriseCategoriesSection() {
   const categoryPromises = FEATURED_CATEGORY_HANDLES.map((handle) => getCollection(handle))
