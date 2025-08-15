@@ -14,7 +14,7 @@
         "minVariantPrice": { "amount": "999.00", "currencyCode": "USD" }
       },
       "featuredImage": {
-        "url": "https://images.unsplash.com/photo-1695048136449-cf5d2a0cb46a",
+        "url": "/product-images/iphone_15.jpg",
         "altText": "iPhone 15 Pro",
         "width": 1024,
         "height": 1024
@@ -45,7 +45,7 @@
         }
       ],
       "images": [
-        { "url": "https://images.unsplash.com/photo-1695048136449-cf5d2a0cb46a", "altText": "iPhone 15 Pro", "width": 1024, "height": 1024 }
+        { "url": "/product-images/iphone_15.jpg", "altText": "iPhone 15 Pro", "width": 1024, "height": 1024 }
       ],
       "collections": [ { "handle": "cell-phones", "title": "Cell Phones" } ]
     },
@@ -63,7 +63,7 @@
         "minVariantPrice": { "amount": "1199.00", "currencyCode": "USD" }
       },
       "featuredImage": {
-        "url": "https://images.unsplash.com/photo-1696760142132-0b6a1cfb332f",
+        "url": "/product-images/iphone_15.jpg",
         "altText": "iPhone 15 Pro Max",
         "width": 1024,
         "height": 1024
@@ -83,7 +83,7 @@
         }
       ],
       "images": [
-        { "url": "https://images.unsplash.com/photo-1696760142132-0b6a1cfb332f", "altText": "iPhone 15 Pro Max", "width": 1024, "height": 1024 }
+        { "url": "/product-images/iphone_15.jpg", "altText": "iPhone 15 Pro Max", "width": 1024, "height": 1024 }
       ],
       "collections": [ { "handle": "cell-phones", "title": "Cell Phones" } ]
     },
@@ -101,7 +101,7 @@
         "minVariantPrice": { "amount": "799.00", "currencyCode": "USD" }
       },
       "featuredImage": {
-        "url": "https://images.unsplash.com/photo-1693481229454-46c4f79f9b8f",
+        "url": "/product-images/iphone_15.jpg",
         "altText": "iPhone 15",
         "width": 1024,
         "height": 1024
@@ -121,7 +121,7 @@
         }
       ],
       "images": [
-        { "url": "https://images.unsplash.com/photo-1693481229454-46c4f79f9b8f", "altText": "iPhone 15", "width": 1024, "height": 1024 }
+        { "url": "/product-images/iphone_15.jpg", "altText": "iPhone 15", "width": 1024, "height": 1024 }
       ],
       "collections": [ { "handle": "cell-phones", "title": "Cell Phones" } ]
     },
@@ -139,7 +139,7 @@
         "minVariantPrice": { "amount": "699.00", "currencyCode": "USD" }
       },
       "featuredImage": {
-        "url": "https://images.unsplash.com/photo-1662582816461-b54915f5f8a9",
+        "url": "/product-images/iphone_14.jpeg",
         "altText": "iPhone 14",
         "width": 1024,
         "height": 1024
@@ -159,7 +159,7 @@
         }
       ],
       "images": [
-        { "url": "https://images.unsplash.com/photo-1662582816461-b54915f5f8a9", "altText": "iPhone 14", "width": 1024, "height": 1024 }
+        { "url": "/product-images/iphone_14.jpeg", "altText": "iPhone 14", "width": 1024, "height": 1024 }
       ],
       "collections": [ { "handle": "cell-phones", "title": "Cell Phones" } ]
     },
@@ -177,7 +177,7 @@
         "minVariantPrice": { "amount": "599.00", "currencyCode": "USD" }
       },
       "featuredImage": {
-        "url": "https://images.unsplash.com/photo-1634669138761-0d9fb6b1b8d5",
+        "url": "/product-images/iphone_13.jpg",
         "altText": "iPhone 13",
         "width": 1024,
         "height": 1024
@@ -197,7 +197,7 @@
         }
       ],
       "images": [
-        { "url": "https://images.unsplash.com/photo-1634669138761-0d9fb6b1b8d5", "altText": "iPhone 13", "width": 1024, "height": 1024 }
+        { "url": "/product-images/iphone_13.jpg", "altText": "iPhone 13", "width": 1024, "height": 1024 }
       ],
       "collections": [ { "handle": "cell-phones", "title": "Cell Phones" } ]
     },
@@ -215,7 +215,7 @@
         "minVariantPrice": { "amount": "499.00", "currencyCode": "USD" }
       },
       "featuredImage": {
-        "url": "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7",
+        "url": "/product-images/iphone_12.jpg",
         "altText": "iPhone 12",
         "width": 1024,
         "height": 1024
@@ -235,7 +235,7 @@
         }
       ],
       "images": [
-        { "url": "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7", "altText": "iPhone 12", "width": 1024, "height": 1024 }
+        { "url": "/product-images/iphone_12.jpg", "altText": "iPhone 12", "width": 1024, "height": 1024 }
       ],
       "collections": [ { "handle": "cell-phones", "title": "Cell Phones" } ]
     },
@@ -253,7 +253,7 @@
         "minVariantPrice": { "amount": "1299.00", "currencyCode": "USD" }
       },
       "featuredImage": {
-        "url": "https://images.unsplash.com/photo-1715881363081-fd0992ef2078",
+        "url": "/product-images/samsung_s24_ultra.jpg",
         "altText": "Galaxy S24 Ultra",
         "width": 1024,
         "height": 1024
@@ -273,7 +273,7 @@
         }
       ],
       "images": [
-        { "url": "https://images.unsplash.com/photo-1715881363081-fd0992ef2078", "altText": "Galaxy S24 Ultra", "width": 1024, "height": 1024 }
+        { "url": "/product-images/samsung_s24_ultra.jpg", "altText": "Galaxy S24 Ultra", "width": 1024, "height": 1024 }
       ],
       "collections": [ { "handle": "cell-phones", "title": "Cell Phones" } ]
     },
@@ -291,7 +291,7 @@
         "minVariantPrice": { "amount": "799.00", "currencyCode": "USD" }
       },
       "featuredImage": {
-        "url": "https://images.unsplash.com/photo-1713800447843-ff3e3f4ccf9c",
+        "url": "/product-images/samsung_s24_ultra.jpg",
         "altText": "Galaxy S24",
         "width": 1024,
         "height": 1024
@@ -311,7 +311,7 @@
         }
       ],
       "images": [
-        { "url": "https://images.unsplash.com/photo-1713800447843-ff3e3f4ccf9c", "altText": "Galaxy S24", "width": 1024, "height": 1024 }
+        { "url": "/product-images/samsung_s24_ultra.jpg", "altText": "Galaxy S24", "width": 1024, "height": 1024 }
       ],
       "collections": [ { "handle": "cell-phones", "title": "Cell Phones" } ]
     },
@@ -441,7 +441,7 @@
         "minVariantPrice": { "amount": "199.00", "currencyCode": "USD" }
       },
       "featuredImage": {
-        "url": "https://images.unsplash.com/photo-1588423771073-b8903fbb85b5",
+        "url": "/product-images/air_pods_pro_2.jpeg",
         "altText": "AirPods Pro 2",
         "width": 1024,
         "height": 1024
@@ -458,7 +458,7 @@
         }
       ],
       "images": [
-        { "url": "https://images.unsplash.com/photo-1588423771073-b8903fbb85b5", "altText": "AirPods Pro 2", "width": 1024, "height": 1024 }
+        { "url": "/product-images/air_pods_pro_2.jpeg", "altText": "AirPods Pro 2", "width": 1024, "height": 1024 }
       ],
       "collections": [ { "handle": "accessories", "title": "Accessories" } ]
     },
@@ -476,7 +476,7 @@
         "minVariantPrice": { "amount": "159.00", "currencyCode": "USD" }
       },
       "featuredImage": {
-        "url": "https://images.unsplash.com/photo-1585386959984-a41552231683",
+        "url": "/product-images/air_pods_4.jpeg",
         "altText": "AirPods 3",
         "width": 1024,
         "height": 1024
@@ -493,7 +493,7 @@
         }
       ],
       "images": [
-        { "url": "https://images.unsplash.com/photo-1585386959984-a41552231683", "altText": "AirPods 3", "width": 1024, "height": 1024 }
+        { "url": "/product-images/air_pods_4.jpeg", "altText": "AirPods 3", "width": 1024, "height": 1024 }
       ],
       "collections": [ { "handle": "accessories", "title": "Accessories" } ]
     },

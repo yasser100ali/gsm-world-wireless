@@ -1,0 +1,423 @@
+Directory structure:
+└── gsm-world-wireless/
+     ├── LICENSE
+     ├── README.md
+     ├── assets/
+     │    ├── blazity-logo-dark.svg
+     │    └── blazity-logo-light.svg
+     ├── commitlint.config.js
+     ├── package.json
+     ├── renovate.json
+     ├── starters/
+     │    └── shopify-algolia/
+     │         ├── app/
+     │         │    ├── 429/
+     │         │    │    ├── layout.tsx
+     │         │    │    └── page.tsx
+     │         │    ├── (browse)/
+     │         │    │    ├── category/
+     │         │    │    │    ├── clp/
+     │         │    │    │    │    └── [slug]/
+     │         │    │    │    │         ├── [page]/
+     │         │    │    │    │         │    └── page.tsx
+     │         │    │    │    │         └── page.tsx
+     │         │    │    │    └── plp/
+     │         │    │    │         └── [slug]/
+     │         │    │    │              └── page.tsx
+     │         │    │    ├── error.tsx
+     │         │    │    ├── favorites/
+     │         │    │    │    └── page.tsx
+     │         │    │    ├── global-error.tsx
+     │         │    │    ├── home/
+     │         │    │    │    ├── [bucket]/
+     │         │    │    │    │    └── page.tsx
+     │         │    │    │    └── _components/
+     │         │    │    │         ├── announcement-bar.tsx
+     │         │    │    │         ├── carousel-section.tsx
+     │         │    │    │         ├── categories-section.tsx
+     │         │    │    │         ├── enterprise-categories-section.tsx
+     │         │    │    │         ├── featured-products-section.tsx
+     │         │    │    │         ├── hero-section.tsx
+     │         │    │    │         ├── modern-new-arrivals-section.tsx
+     │         │    │    │         └── products-week-section.tsx
+     │         │    │    ├── layout.tsx
+     │         │    │    ├── not-found.tsx
+     │         │    │    ├── pages/
+     │         │    │    │    └── [slug]/
+     │         │    │    │         ├── metadata.ts
+     │         │    │    │         └── page.tsx
+     │         │    │    ├── product/
+     │         │    │    │    └── [slug]/
+     │         │    │    │         ├── draft/
+     │         │    │    │         │    └── page.tsx
+     │         │    │    │         ├── loading.tsx
+     │         │    │    │         ├── metadata.ts
+     │         │    │    │         ├── opengraph-image.tsx
+     │         │    │    │         └── page.tsx
+     │         │    │    ├── reviews/
+     │         │    │    │    └── [slug]/
+     │         │    │    │         ├── metadata.ts
+     │         │    │    │         └── page.tsx
+     │         │    │    └── search/
+     │         │    │         ├── opengraph-image.tsx
+     │         │    │         └── page.tsx
+     │         │    ├── actions/
+     │         │    │    ├── cart.actions.ts
+     │         │    │    ├── favorites.actions.ts
+     │         │    │    ├── product.actions.ts
+     │         │    │    └── reviews.actions.ts
+     │         │    ├── api/
+     │         │    │    ├── feed/
+     │         │    │    │    └── sync/
+     │         │    │    │         └── route.ts
+     │         │    │    ├── health/
+     │         │    │    │    └── route.ts
+     │         │    │    ├── navigation/
+     │         │    │    │    └── route.ts
+     │         │    │    ├── redirects/
+     │         │    │    │    └── route.ts
+     │         │    │    └── reviews/
+     │         │    │         ├── ai-summary/
+     │         │    │         │    └── route.ts
+     │         │    │         └── sync/
+     │         │    │              └── route.ts
+     │         │    ├── globals.css
+     │         │    ├── icon.png
+     │         │    ├── layout.tsx
+     │         │    ├── manifest.ts
+     │         │    ├── opengraph-image.jpg
+     │         │    ├── robots.txt
+     │         │    ├── shared-metadata.ts
+     │         │    ├── sitemap.ts
+     │         │    └── styles/
+     │         │         ├── megamenu.css
+     │         │         └── reset.css
+     │         ├── components/
+     │         │    ├── back-button.tsx
+     │         │    ├── breadcrumbs.tsx
+     │         │    ├── cart/
+     │         │    │    ├── cart-item.tsx
+     │         │    │    ├── cart-sheet.tsx
+     │         │    │    ├── cart-view.tsx
+     │         │    │    ├── change-quantity-button.tsx
+     │         │    │    └── delete-button.tsx
+     │         │    ├── category/
+     │         │    │    ├── category-clp-view.tsx
+     │         │    │    ├── category-landing-page.tsx
+     │         │    │    ├── category-plp-view.tsx
+     │         │    │    └── page-skeleton.tsx
+     │         │    ├── category-card.tsx
+     │         │    ├── compact-product-card.tsx
+     │         │    ├── demo-mode-alert.tsx
+     │         │    ├── draft-toolbar.tsx
+     │         │    ├── enterprise-category-card.tsx
+     │         │    ├── expandable-content.tsx
+     │         │    ├── fade-out-mask.tsx
+     │         │    ├── featured-product-card.tsx
+     │         │    ├── filters/
+     │         │    │    ├── active-filters.tsx
+     │         │    │    ├── category-facet.tsx
+     │         │    │    ├── controls.tsx
+     │         │    │    ├── facet.tsx
+     │         │    │    ├── facets-content.tsx
+     │         │    │    ├── facets-desktop.tsx
+     │         │    │    ├── facets-mobile.tsx
+     │         │    │    ├── hide-filters.tsx
+     │         │    │    ├── hits-section.tsx
+     │         │    │    ├── pagination-section.tsx
+     │         │    │    ├── price-facet.tsx
+     │         │    │    ├── rating-facet.tsx
+     │         │    │    ├── search-facet.tsx
+     │         │    │    ├── sorter.tsx
+     │         │    │    └── vendors-facet.tsx
+     │         │    ├── flag-values.tsx
+     │         │    ├── footer.tsx
+     │         │    ├── generic-modal.tsx
+     │         │    ├── github-badge.tsx
+     │         │    ├── homepage-carousel.tsx
+     │         │    ├── icons/
+     │         │    │    ├── arrow-icon.tsx
+     │         │    │    ├── bag-icon.tsx
+     │         │    │    ├── caret-sort-icon.tsx
+     │         │    │    ├── check-icon.tsx
+     │         │    │    ├── chevron-icon.tsx
+     │         │    │    ├── close-icon.tsx
+     │         │    │    ├── favorites-icon.tsx
+     │         │    │    ├── filters-icon.tsx
+     │         │    │    ├── heart-icon.tsx
+     │         │    │    ├── plus-icon.tsx
+     │         │    │    ├── robot-icon.tsx
+     │         │    │    ├── search-icon.tsx
+     │         │    │    ├── star-icon.tsx
+     │         │    │    ├── stop-icon.tsx
+     │         │    │    └── thin-search-icon.tsx
+     │         │    ├── loading-dots.tsx
+     │         │    ├── logo.tsx
+     │         │    ├── mini-product-card.tsx
+     │         │    ├── modals/
+     │         │    │    ├── modals.tsx
+     │         │    │    ├── review-modal.tsx
+     │         │    │    └── search-modal.tsx
+     │         │    ├── navigation-bar/
+     │         │    │    ├── autocomplete.tsx
+     │         │    │    ├── cart.tsx
+     │         │    │    ├── favorites.tsx
+     │         │    │    ├── mobile-inline-script.ts
+     │         │    │    ├── navigation-bar-wrapper.tsx
+     │         │    │    ├── navigation-bar.tsx
+     │         │    │    ├── navigation-item.tsx
+     │         │    │    ├── open-cart-button.tsx
+     │         │    │    ├── search-button.tsx
+     │         │    │    ├── types.ts
+     │         │    │    └── variants/
+     │         │    │         ├── image-grid.tsx
+     │         │    │         ├── text-grid.tsx
+     │         │    │         └── text-image-grid.tsx
+     │         │    ├── product/
+     │         │    │    ├── add-to-cart-button.tsx
+     │         │    │    ├── center-image-section.tsx
+     │         │    │    ├── faq-section/
+     │         │    │    │    ├── faq-section-client.tsx
+     │         │    │    │    └── shopify-rich-text.tsx
+     │         │    │    ├── favorite-marker.tsx
+     │         │    │    ├── page-skeleton.tsx
+     │         │    │    ├── product-added-alert.tsx
+     │         │    │    ├── product-images.tsx
+     │         │    │    ├── product-title.tsx
+     │         │    │    ├── review-button.tsx
+     │         │    │    ├── review-card.tsx
+     │         │    │    ├── reviews-section.tsx
+     │         │    │    ├── right-section.tsx
+     │         │    │    ├── side-images.tsx
+     │         │    │    ├── similar-product-section-skeleton.tsx
+     │         │    │    ├── similar-products-section.tsx
+     │         │    │    ├── variant-dropdowns.tsx
+     │         │    │    ├── variant.tsx
+     │         │    │    └── variants-section.tsx
+     │         │    ├── product-card.tsx
+     │         │    ├── search-view.tsx
+     │         │    ├── spinner.tsx
+     │         │    ├── star-rating.tsx
+     │         │    ├── third-parties.tsx
+     │         │    ├── ui/
+     │         │    │    ├── accordion.tsx
+     │         │    │    ├── alert.tsx
+     │         │    │    ├── audio-visualizer.tsx
+     │         │    │    ├── avatar.tsx
+     │         │    │    ├── badge.tsx
+     │         │    │    ├── breadcrumb.tsx
+     │         │    │    ├── button-old.tsx
+     │         │    │    ├── button.tsx
+     │         │    │    ├── card.tsx
+     │         │    │    ├── carousel.tsx
+     │         │    │    ├── chat-message.tsx
+     │         │    │    ├── checkbox.tsx
+     │         │    │    ├── copy-button.tsx
+     │         │    │    ├── dialog.tsx
+     │         │    │    ├── dropdown-menu.tsx
+     │         │    │    ├── form.tsx
+     │         │    │    ├── input.tsx
+     │         │    │    ├── label.tsx
+     │         │    │    ├── markdown-renderer.tsx
+     │         │    │    ├── message-list.tsx
+     │         │    │    ├── pagination.tsx
+     │         │    │    ├── prompt-suggestions.tsx
+     │         │    │    ├── scroll-area.tsx
+     │         │    │    ├── select.tsx
+     │         │    │    ├── separator.tsx
+     │         │    │    ├── sheet.tsx
+     │         │    │    ├── sidebar.tsx
+     │         │    │    ├── skeleton.tsx
+     │         │    │    ├── textarea.tsx
+     │         │    │    ├── toggle-group.tsx
+     │         │    │    ├── tooltip.tsx
+     │         │    │    └── typing-indicator.tsx
+     │         │    └── uniform-product-card.tsx
+     │         ├── components.json
+     │         ├── constants/
+     │         │    └── index.ts
+     │         ├── e2e/
+     │         │    └── example.spec.ts
+     │         ├── env.mjs
+     │         ├── hooks/
+     │         │    └── use-responsive-carousel.ts
+     │         ├── jest.config.js
+     │         ├── jest.setup.js
+     │         ├── lib/
+     │         │    ├── algolia/
+     │         │    │    ├── api-rate-limit.ts
+     │         │    │    ├── client.ts
+     │         │    │    ├── filter-builder.test.ts
+     │         │    │    ├── filter-builder.ts
+     │         │    │    ├── index.ts
+     │         │    │    ├── rate-limited.ts
+     │         │    │    └── utils.ts
+     │         │    ├── navigation.ts
+     │         │    ├── redirects/
+     │         │    │    ├── bloom-filter.json
+     │         │    │    └── redirects.json
+     │         │    ├── replicate/
+     │         │    │    └── index.ts
+     │         │    ├── reviews/
+     │         │    │    ├── client.ts
+     │         │    │    ├── index.ts
+     │         │    │    └── types.ts
+     │         │    └── shopify/
+     │         │         ├── client.ts
+     │         │         ├── fragments/
+     │         │         │    ├── cart.ts
+     │         │         │    ├── collection.ts
+     │         │         │    ├── customer.ts
+     │         │         │    ├── image.ts
+     │         │         │    ├── menu.ts
+     │         │         │    ├── page.ts
+     │         │         │    ├── product.ts
+     │         │         │    └── seo.ts
+     │         │         ├── index.ts
+     │         │         ├── mutations/
+     │         │         │    ├── cart.storefront.ts
+     │         │         │    ├── customer.storefront.ts
+     │         │         │    ├── product-feed.admin.ts
+     │         │         │    └── webhook.admin.ts
+     │         │         ├── normalize.ts
+     │         │         ├── queries/
+     │         │         │    ├── cart.storefront.ts
+     │         │         │    ├── collection.storefront.ts
+     │         │         │    ├── customer.storefront.ts
+     │         │         │    ├── menu.storefront.ts
+     │         │         │    ├── page.storefront.ts
+     │         │         │    ├── product-feed.admin.ts
+     │         │         │    ├── product.admin.ts
+     │         │         │    └── product.storefront.ts
+     │         │         ├── types/
+     │         │         │    ├── admin/
+     │         │         │    │    ├── admin-2024-01.schema.json
+     │         │         │    │    ├── admin.generated.d.ts
+     │         │         │    │    └── admin.types.d.ts
+     │         │         │    ├── index.ts
+     │         │         │    ├── storefront-2024-01.schema.json
+     │         │         │    ├── storefront.generated.d.ts
+     │         │         │    └── storefront.types.d.ts
+     │         │         └── utils.ts
+     │         ├── middleware.ts
+     │         ├── next-env.d.ts
+     │         ├── next.config.mjs
+     │         ├── package.json
+     │         ├── playwright.config.ts
+     │         ├── postcss.config.js
+     │         ├── prettier.config.js
+     │         ├── public/
+     │         │    ├── category-images/
+     │         │    │    ├── beauty-clp.png
+     │         │    │    ├── beds-clp.png
+     │         │    │    ├── cardigans-and-sweaters-clp.png
+     │         │    │    ├── electronics-clp.png
+     │         │    │    ├── furniture-clp.png
+     │         │    │    ├── skirts-modern-clp.png
+     │         │    │    ├── speakers-clp.png
+     │         │    │    └── sports-and-outdoors-clp.png
+     │         │    ├── category-placeholder-3.png
+     │         │    ├── category-placeholder-4.png
+     │         │    ├── category-placeholder-5.png
+     │         │    ├── category-placeholder-6.png
+     │         │    ├── default-product-image.svg
+     │         │    ├── demo-categories-data.json
+     │         │    ├── demo-product-reviews-data.json
+     │         │    ├── fonts/
+     │         │    │    ├── Inter-Black.ttf
+     │         │    │    ├── Inter-Bold.ttf
+     │         │    │    ├── Inter-ExtraBold.ttf
+     │         │    │    ├── Inter-ExtraLight.ttf
+     │         │    │    ├── Inter-Light.ttf
+     │         │    │    ├── Inter-Medium.ttf
+     │         │    │    ├── Inter-Regular.ttf
+     │         │    │    ├── Inter-SemiBold.ttf
+     │         │    │    └── Inter-Thin.ttf
+     │         │    ├── hero-images/
+     │         │    │    ├── kayak.jpg
+     │         │    │    ├── lipstick.jpg
+     │         │    │    ├── parfum.jpg
+     │         │    │    └── speaker.jpg
+     │         │    ├── hero.png
+     │         │    ├── menu/
+     │         │    │    ├── beauty-1.png
+     │         │    │    ├── beauty-2.png
+     │         │    │    ├── beauty-3.png
+     │         │    │    ├── beauty-4.png
+     │         │    │    ├── beauty-5.png
+     │         │    │    ├── electronics-1.png
+     │         │    │    ├── electronics-2.png
+     │         │    │    ├── electronics-3.png
+     │         │    │    ├── electronics-4.png
+     │         │    │    ├── furniture-1.png
+     │         │    │    ├── furniture-2.png
+     │         │    │    ├── furniture-3.png
+     │         │    │    └── furniture-4.png
+     │         │    ├── merchandise-data.json
+     │         │    └── product-images/
+     │         │         ├── kayak-product.jpg
+     │         │         ├── lipstick-product.jpg
+     │         │         ├── parfum-product.jpg
+     │         │         └── speaker-product.jpg
+     │         ├── report-bundle-size.js
+     │         ├── reset.d.ts
+     │         ├── scripts/
+     │         │    ├── codegen/
+     │         │    │    └── remove-eslint-rules.ts
+     │         │    ├── rate-limit-summary.js
+     │         │    ├── redirects/
+     │         │    │    ├── generate-bloom-filter.ts
+     │         │    │    └── generate-test-redirects.ts
+     │         │    ├── sync/
+     │         │    │    ├── README.md
+     │         │    │    └── sync.ts
+     │         │    └── webhooks/
+     │         │         ├── delete-webhooks.ts
+     │         │         ├── list-webhooks.ts
+     │         │         └── setup-webhooks.ts
+     │         ├── shopify-webhooks.d.ts
+     │         ├── stores/
+     │         │    ├── add-product-store.ts
+     │         │    ├── cart-store.ts
+     │         │    ├── filter-transition-store.ts
+     │         │    ├── filters-store.ts
+     │         │    ├── modal-store.ts
+     │         │    └── tool-invocation-store.ts
+     │         ├── tailwind.config.ts
+     │         ├── tsconfig.json
+     │         ├── tsup.config.ts
+     │         ├── types/
+     │         │    └── index.ts
+     │         ├── utils/
+     │         │    ├── __tests__/
+     │         │    │    ├── build-search-filter.test.ts
+     │         │    │    └── visual-variant-utils.test.ts
+     │         │    ├── ab-testing.ts
+     │         │    ├── authenticate-api-route.ts
+     │         │    ├── build-search-filter.ts
+     │         │    ├── category-items.ts
+     │         │    ├── cn.ts
+     │         │    ├── compare-hmac.ts
+     │         │    ├── demo-utils.ts
+     │         │    ├── enrich-product.ts
+     │         │    ├── generate-uuid.ts
+     │         │    ├── get-cookie.ts
+     │         │    ├── get-page-display-type.ts
+     │         │    ├── get-vercel-flag-overrides.ts
+     │         │    ├── highlighted-text.tsx
+     │         │    ├── make-keywords.ts
+     │         │    ├── map-currency-to-sign.ts
+     │         │    ├── nav-items.ts
+     │         │    ├── opt-in.ts
+     │         │    ├── product-options-utils.ts
+     │         │    ├── slug-name.ts
+     │         │    ├── use-autocomplete.ts
+     │         │    ├── use-copy-to-clipboard.ts
+     │         │    ├── use-hierarchical-menu.ts
+     │         │    ├── use-mobile.ts
+     │         │    ├── use-read-more.ts
+     │         │    ├── variants.ts
+     │         │    └── visual-variant-utils.ts
+     │         ├── vercel.json
+     │         └── yarn.lock
+     └── yarn.lock

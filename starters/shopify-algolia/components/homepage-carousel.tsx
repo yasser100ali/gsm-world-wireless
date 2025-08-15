@@ -6,7 +6,6 @@ import Link from "next/link"
 import { useCallback, useEffect, useRef, useState } from "react"
 import { cn } from "utils/cn"
 import { Button } from "./ui/button"
-import { CompactProductCard } from "./compact-product-card"
 import type { CommerceProduct } from "types"
 
 export interface HeroSlide {
@@ -152,17 +151,7 @@ export function HomepageCarousel({ slides = [], className }: HomepageCarouselPro
                         sizes="(min-width: 1024px) 50vw, 0vw"
                       />
 
-                      {slide.product && (
-                        <div className="absolute bottom-4 right-4 hidden w-[200px] md:block lg:bottom-8 lg:right-8 lg:w-[240px]">
-                          <CompactProductCard
-                            {...slide.product}
-                            selectedVariant={slide.product.selectedVariant}
-                            variantOptions={slide.variantOptions}
-                            priority={index === 0}
-                            className="bg-background/95 shadow-xl backdrop-blur-sm"
-                          />
-                        </div>
-                      )}
+                      {false}
                     </div>
                   </div>
                 </div>
