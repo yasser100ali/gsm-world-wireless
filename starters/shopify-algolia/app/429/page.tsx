@@ -3,7 +3,7 @@ import Link from "next/link"
 import { BookOpenIcon, ClockIcon, RocketIcon } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Rate Limit Exceeded | GSM World Wireless",
+  title: "Rate Limit Exceeded | GSM World USA",
   description: "You've temporarily exceeded our rate limits. Please wait a moment before trying again.",
 }
 

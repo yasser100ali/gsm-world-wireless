@@ -4,8 +4,8 @@ import {sharedMetadata} from "./shared-metadata"
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "GSM World Wireless | Cypress, CA",
-    short_name: "GSM World Wireless",
+    name: "GSM World USA | Cypress, CA",
+    short_name: "GSM World USA",
     description: sharedMetadata.openGraph.description,
     start_url: "/",
     display: "standalone",

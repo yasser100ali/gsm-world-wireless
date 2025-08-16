@@ -32,6 +32,6 @@ export const categoryItems: CategoryItem[] = [
     title: "About",
     handle: "about",
     href: "/pages/about",
-    description: "GSM World Wireless — Cypress, CA",
+    description: "GSM World USA — Cypress, CA",
   },
 ]

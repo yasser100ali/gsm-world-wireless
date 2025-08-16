@@ -16,17 +16,17 @@ export async function generateMetadata(props: ProductReviewsPageProps): Promise<
 
   return {
     metadataBase: new URL(env.LIVE_URL!),
-    title: `${title} Reviews & Feedback | GSM World Wireless`,
+    title: `${title} Reviews & Feedback | GSM World USA`,
     description: `Discover What People Are Saying About ${title} `,
     generator: "Next.js",
     applicationName: "Next.js",
     referrer: "origin-when-cross-origin",
     keywords: keywords,
     category: lastCollection?.title || "",
-    creator: "GSM World Wireless",
+    creator: "GSM World USA",
     alternates: {
       canonical: `/reviews/${slug}`,
     },
-    publisher: "GSM World Wireless",
+    publisher: "GSM World USA",
   }
 }

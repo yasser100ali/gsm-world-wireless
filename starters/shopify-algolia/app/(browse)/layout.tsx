@@ -21,7 +21,7 @@ export const revalidate = 86400
 
 export const metadata: Metadata = {
   metadataBase: sharedMetadata.metadataBase,
-  title: "GSM World Wireless | Cypress, CA",
+  title: "GSM World USA | Cypress, CA",
   description: sharedMetadata.openGraph.description,
   openGraph: sharedMetadata.openGraph,
   twitter: sharedMetadata.twitter,

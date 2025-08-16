@@ -19,7 +19,7 @@ export async function generateMetadata(props: ProductListingPageProps): Promise<
   const params = await props.params
   return {
     metadataBase: new URL(env.LIVE_URL!),
-    title: `${params.slug} | GSM World Wireless`,
+    title: `${params.slug} | GSM World USA`,
     description: "In excepteur elit mollit in.",
   }
 }
