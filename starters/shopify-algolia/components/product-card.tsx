@@ -1,7 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
 import { cn } from "utils/cn"
-import { type CurrencyType, mapCurrencyToSign } from "utils/map-currency-to-sign"
 import type { CommerceProduct } from "types"
 import { StarIcon } from "components/icons/star-icon"
 
@@ -20,9 +19,6 @@ export const ProductCard = ({
   handle,
   title,
   featuredImage,
-  minPrice,
-  avgRating,
-  totalReviews,
   className,
   priority,
   vendor,
