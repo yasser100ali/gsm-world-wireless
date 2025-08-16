@@ -9,7 +9,7 @@ export function Footer() {
         <div className="flex justify-center">
           <div className="space-y-2 text-center">
             <h3 className="text-lg font-semibold text-primary">Contact Us</h3>
-            <p className="text-sm">Email: jaanyousuf2000@yahoo.com</p>
+            <p className="text-sm">Email: Infoprowireless@gmail.com</p>
             <p className="text-sm">Phone: 714-280-6700</p>
           </div>
         </div>
