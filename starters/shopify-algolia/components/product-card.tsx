@@ -6,10 +6,7 @@ import type { CommerceProduct } from "types"
 import { StarIcon } from "components/icons/star-icon"
 
 interface ProductCardProps
-  extends Pick<
-    CommerceProduct,
-    "variants" | "handle" | "images" | "title" | "featuredImage" | "minPrice" | "avgRating" | "totalReviews" | "vendor"
-  > {
+  extends Pick<CommerceProduct, "variants" | "handle" | "images" | "title" | "featuredImage" | "vendor"> {
   priority?: boolean
   prefetch?: boolean
   className?: string
@@ -37,7 +34,7 @@ export const ProductCard = ({
   const noOfVariants = variants?.length
   const path = href || `/product/${handle}`
   const linkAria = `Visit product: ${title}`
-  const variantPrice = variants?.find(Boolean)?.price
+  const variantPrice = undefined
 
   if (variant === "hero") {
     return (
@@ -61,11 +58,7 @@ export const ProductCard = ({
           />
         </div>
         <h3 className="mb-1 line-clamp-2 text-sm font-semibold text-foreground">{title}</h3>
-        {!!variantPrice && !!minPrice && (
-          <p className="text-sm font-medium text-primary">
-            {mapCurrencyToSign((variantPrice.currencyCode as CurrencyType) || "USD") + minPrice.toFixed(2)}
-          </p>
-        )}
+        {false}
         <span className="mt-2 text-xs font-medium text-muted-foreground">Shop Now →</span>
       </Link>
     )
@@ -99,39 +92,10 @@ export const ProductCard = ({
         <div className="flex flex-col pt-1">
           {!!vendor && <p className={cn("text-sm text-gray-500", highlighted && "md:text-base")}>{vendor}</p>}
 
-          <div className="flex flex-wrap items-center gap-1">
-            {!!avgRating && !!totalReviews && (
-              <>
-                <div className="flex items-center space-x-1">
-                  <StarIcon className="size-3.5 fill-gray-800/95 stroke-gray-800/95" />
-
-                  <div className="flex items-center gap-0.5 text-sm font-medium">
-                    <div>{avgRating.toFixed(2)}</div>
-                    <span className="text-xs text-gray-500">
-                      ({totalReviews} review{totalReviews !== 1 && "s"})
-                    </span>
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
+          <div className="flex flex-wrap items-center gap-1" />
         </div>
 
-        {!!variantPrice && !!minPrice && (
-          <div className="mt-auto flex flex-col pt-10">
-            {noOfVariants > 0 && (
-              <p className={cn("text-sm text-gray-500", highlighted && "md:text-base")}>
-                {noOfVariants} variant{noOfVariants > 1 ? "s" : ""}
-              </p>
-            )}
-            <div className={cn("flex w-full items-baseline justify-between text-sm", highlighted && "md:text-base")}>
-              <span className="text-primary/50">From</span>
-              <span className={cn("text-base font-semibold md:text-lg", highlighted && "md:text-2xl")}>
-                {mapCurrencyToSign((variantPrice.currencyCode as CurrencyType) || "USD") + minPrice.toFixed(2)}
-              </span>
-            </div>
-          </div>
-        )}
+        {false}
       </div>
     </Link>
   )

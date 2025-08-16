@@ -119,20 +119,10 @@ export default async function Product(props: ProductProps) {
       </div>
       <main className="mx-auto max-w-container-sm">
         <div className="grid grid-cols-1 gap-4 md:mx-auto md:max-w-screen-xl md:grid-cols-12 md:gap-8">
-          <ProductTitle
-            className="md:hidden"
-            title={product.title}
-            price={combinationPrice}
-            currency={combination?.price ? mapCurrencyToSign(combination.price?.currencyCode as CurrencyType) : "$"}
-          />
+          <ProductTitle className="md:hidden" title={product.title} price={null} currency={"$"} />
           <ProductImages key={slug} images={imagesToShow} initialActiveIndex={activeIndex} />
           <RightSection className="md:col-span-6 md:col-start-8 md:mt-0">
-            <ProductTitle
-              className="hidden md:col-span-4 md:col-start-9 md:block"
-              title={product.title}
-              price={combinationPrice}
-              currency={combination?.price ? mapCurrencyToSign(combination.price?.currencyCode as CurrencyType) : "$"}
-            />
+            <ProductTitle className="hidden md:col-span-4 md:col-start-9 md:block" title={product.title} price={null} currency={"$"} />
             {!hasOnlyOneVariant && (
               <VariantDropdowns
                 variants={product.variants}
@@ -142,8 +132,7 @@ export default async function Product(props: ProductProps) {
               />
             )}
             <p>{product.description}</p>
-            <AddToCartButton className="mt-4" product={product} combination={combination} />
-            <FavoriteMarker handle={slug} />
+            {false}
             <FaqSectionClient defaultOpenSections={[nameToSlug(getDefaultFaqAccordionItemValue()[0])]}>
               <FaqAccordionItem title={getDefaultFaqAccordionItemValue()[0]}>
                 <ShopifyRichText
@@ -151,33 +140,13 @@ export default async function Product(props: ProductProps) {
                   className="prose prose-sm max-w-none"
                 />
               </FaqAccordionItem>
-              <FaqAccordionItem title="Size and Fit">
-                <p>
-                  Est veniam qui aute nisi occaecat ad non velit anim commodo sit proident. Labore sint officia nostrud
-                  eu est fugiat nulla velit sint commodo. Excepteur sit ut anim pariatur minim adipisicing dolore sit
-                  dolore cupidatat. Amet reprehenderit ipsum aute minim incididunt adipisicing est.
-                </p>
-              </FaqAccordionItem>
-              <FaqAccordionItem title="Free Delivery and Returns">
-                <p>
-                  Aliqua Lorem ullamco officia cupidatat cupidatat. Nostrud occaecat ex in Lorem. Et occaecat
-                  adipisicing do aliquip duis aliquip enim culpa nulla. Nulla quis aute ex eu est ullamco enim
-                  incididunt fugiat proident laboris. Laboris sint ad et nostrud velit fugiat fugiat proident enim sit
-                  irure elit. Ut amet elit labore cupidatat id consectetur sint fugiat esse excepteur pariatur. Tempor
-                  pariatur dolor eiusmod proident ad incididunt officia labore fugiat consectetur. Sunt veniam officia
-                  officia eiusmod minim incididunt est sit esse excepteur non cupidatat voluptate ea. Do excepteur sunt
-                  nostrud eu do id nisi dolore laboris ea ullamco magna eu. Eiusmod irure dolore amet velit laboris
-                  excepteur cupidatat est cupidatat minim ut anim id. Deserunt velit ex exercitation consequat quis
-                  magna pariatur laboris elit minim eiusmod anim.
-                </p>
-              </FaqAccordionItem>
+              {false}
               <FaqAccordionItem title="Supplier Information">
                 <p>
-                  Aliqua ut ex irure eu officia dolore velit et occaecat pariatur excepteur nostrud ad. Ea reprehenderit
-                  sint culpa excepteur adipisicing ipsum esse excepteur officia culpa adipisicing nostrud. Nulla Lorem
-                  voluptate tempor officia id mollit do est amet dolor nulla. Sint sunt consequat non in reprehenderit
-                  Lorem velit enim cillum enim. Consequat occaecat exercitation consequat nisi veniam. Ipsum est
-                  reprehenderit cupidatat nulla minim anim deserunt consequat ipsum anim ea tempor.
+                  GSM World USA offers competitive wholesale pricing at any available quantity, from small recurring
+                  allocations to large one‑time bulk purchases. All devices are tested and graded with transparent
+                  condition standards. Based in Cypress, CA, we provide fast fulfillment and responsive support for
+                  retailers, repair shops, and enterprise buyers.
                 </p>
               </FaqAccordionItem>
             </FaqSectionClient>

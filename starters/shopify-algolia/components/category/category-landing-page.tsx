@@ -18,7 +18,14 @@ export function CategoryLandingPage({ collection, products, basePath }: Category
   const [showAllProducts, setShowAllProducts] = useState(false)
 
   const initialProductCount = 12
-  const displayedProducts = showAllProducts ? products : products.slice(0, initialProductCount)
+  // Filter to cell phones only for the Cell Phones collection
+  const phoneOnly = products.filter((p) => {
+    const title = (p.title || "").toLowerCase()
+    const allowed = /iphone|galaxy|pixel|android/.test(title)
+    const excluded = /macbook|airpod|magsafe|charger|watch|ipad/.test(title)
+    return allowed && !excluded
+  })
+  const displayedProducts = showAllProducts ? phoneOnly : phoneOnly.slice(0, initialProductCount)
   const hasMoreProducts = products.length > initialProductCount
 
   return (
@@ -62,13 +69,32 @@ export function CategoryLandingPage({ collection, products, basePath }: Category
       {}
       {products.length > 0 && (
         <div className="py-8">
-          <h2 className="mb-6 text-2xl font-semibold tracking-tight md:text-3xl">Featured Products</h2>
+          <h2 className="mb-6 text-2xl font-semibold tracking-tight md:text-3xl">Featured Phones</h2>
 
           {}
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-            {displayedProducts.map((product) => (
-              <ProductCard key={product.id} {...product} className="h-full" prefetch={false} />
-            ))}
+            <div className="col-span-full grid grid-cols-1 gap-4 md:grid-cols-2">
+              <div>
+                <h3 className="mb-2 text-xl font-semibold">iPhones</h3>
+                <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+                  {displayedProducts
+                    .filter((p) => p.title.toLowerCase().includes("iphone"))
+                    .map((product) => (
+                      <ProductCard key={product.id} {...product} className="h-full" prefetch={false} />
+                    ))}
+                </div>
+              </div>
+              <div>
+                <h3 className="mb-2 text-xl font-semibold">Android</h3>
+                <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+                  {displayedProducts
+                    .filter((p) => !p.title.toLowerCase().includes("iphone"))
+                    .map((product) => (
+                      <ProductCard key={product.id} {...product} className="h-full" prefetch={false} />
+                    ))}
+                </div>
+              </div>
+            </div>
           </div>
 
           {}
