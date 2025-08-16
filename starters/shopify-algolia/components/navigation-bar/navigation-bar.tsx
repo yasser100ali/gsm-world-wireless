@@ -4,8 +4,7 @@ import dynamic from "next/dynamic"
 
 import { cn } from "utils/cn"
 import { Autocomplete } from "./autocomplete"
-import { Cart } from "./cart"
-import { Favorites } from "./favorites"
+// Removed Cart and Favorites icons
 import { ImageGridItem, NavItem, TextGridItem, TextImageGridItem } from "./types"
 import { ImageGridVariant } from "./variants/image-grid"
 import { TextGridVariant } from "./variants/text-grid"
@@ -84,10 +83,6 @@ export function NavigationBar({ items }: NavigationBarProps) {
             GSM World USA
           </Link>
           <div className="menu-actions absolute right-4 flex items-center justify-center gap-2">
-            <Favorites className="not-supports-[container-type]:md:hidden flex supports-[container-type]:@3xl:hidden" />
-            <Suspense fallback={<Skeleton className="size-8" />}>
-              <Cart className="not-supports-[container-type]:md:hidden flex supports-[container-type]:@3xl:hidden" />
-            </Suspense>
             <SearchButton />
           </div>
           <ProductAddedAlert className="not-supports-[container-type]:md:hidden supports-[container-type]:@3xl:hidden" />
@@ -116,11 +111,7 @@ export function NavigationBar({ items }: NavigationBarProps) {
                   <CloseIcon className="size-5" />
                 </button>
                 <Autocomplete className="mr-6" />
-                <div className="flex gap-2">
-                  <Favorites className="not-supports-[container-type]:md:flex hidden supports-[container-type]:@3xl:flex" />
-                  <Cart className="not-supports-[container-type]:md:flex hidden supports-[container-type]:@3xl:flex" />
-                  <ProductAddedAlert className="not-supports-[container-type]:md:block hidden supports-[container-type]:@3xl:block" />
-                </div>
+                <div className="flex gap-2" />
               </div>
             </div>
           </div>

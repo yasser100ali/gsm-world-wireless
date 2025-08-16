@@ -6,62 +6,11 @@ export function Footer() {
   return (
     <footer className="border-t bg-white text-muted-foreground">
       <div className="mx-auto max-w-container-md px-6 py-12">
-        <div className="grid gap-8 sm:grid-cols-2">
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-primary">Newsletter</h3>
-            <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
-            <div className="space-y-2 sm:max-w-md">
-              <Input type="email" placeholder="Enter your email" aria-label="Email for newsletter" />
-              <Button
-                type="submit"
-                className="w-full transition-[transform,background] duration-200 hover:bg-black/85 active:scale-[0.99]"
-              >
-                Subscribe
-              </Button>
-            </div>
-          </div>
-          <div className="flex justify-center gap-24 sm:justify-end">
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-primary">Shop</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/search" className="transition-colors hover:text-gray-700" prefetch={false}>
-                    All Products
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/category/cell-phones" className="transition-colors hover:text-gray-700" prefetch={false}>
-                    Cell Phones
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/category/computers" className="transition-colors hover:text-gray-700" prefetch={false}>
-                    Computers
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/category/accessories" className="transition-colors hover:text-gray-700" prefetch={false}>
-                  Accessories
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-primary">Support</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="mailto:contact@blazity.com" className="transition-colors hover:text-gray-700">
-                    Contact Us
-                  </a>
-                </li>
-                <li>
-                  <a href="https://discord.gg/fyWtyNKmfiX" className="transition-colors hover:text-gray-700">
-                    Discord
-                  </a>
-                </li>
-              </ul>
-            </div>
+        <div className="flex justify-center">
+          <div className="space-y-2 text-center">
+            <h3 className="text-lg font-semibold text-primary">Contact Us</h3>
+            <p className="text-sm">Email: jaanyousuf2000@yahoo.com</p>
+            <p className="text-sm">Phone: 714-280-6700</p>
           </div>
         </div>
         <div className="mt-8 border-t border-muted-foreground/20 pt-8">

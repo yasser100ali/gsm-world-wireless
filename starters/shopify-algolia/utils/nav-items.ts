@@ -9,25 +9,20 @@ export const navigationItems: NavItem[] = [
       variant: "text-grid",
       items: [
         {
-          text: "Smartphones",
-          href: "/category/smartphones",
+          text: "New Phones",
+          href: "/category/new-phones",
           items: [
-            { text: "iPhone", href: "/category/iphone" },
-            { text: "Android Phones", href: "/category/android-phones" },
-            { text: "Unlocked Phones", href: "/category/unlocked-phones" },
+            { text: "iPhones", href: "/category/iphone" },
+            { text: "Android", href: "/category/android-phones" },
           ],
         },
         {
-          text: "Prepaid & Plans",
-          href: "/category/prepaid-phones",
-        },
-        {
-          text: "Cases & Protection",
-          href: "/category/cases-and-protection",
-        },
-        {
-          text: "Chargers & Cables",
-          href: "/category/chargers-and-cables",
+          text: "Used & Refurbished",
+          href: "/category/used-refurbished",
+          items: [
+            { text: "iPhones", href: "/category/iphone" },
+            { text: "Android", href: "/category/android-phones" },
+          ],
         },
       ],
     },
