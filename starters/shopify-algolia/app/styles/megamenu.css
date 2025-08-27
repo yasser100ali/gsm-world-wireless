@@ -613,67 +613,85 @@
   top: 16px;
 }
 
-/* Minimal hover continuity fix */
+/* Enhanced hover continuity fix */
 @media (min-width: 767px) {
-  /* Create invisible bridge on menu items */
+  /* Create larger invisible bridge on menu items */
   .menu .menu__inner .menu__item.menu__dropdown::before {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
     top: 100%;
-    height: 20px;
+    height: 30px;
     background: transparent;
     z-index: 41;
     opacity: 0;
     pointer-events: none;
   }
-  
+
   .menu .menu__inner .menu__item.menu__dropdown:hover::before {
     pointer-events: auto;
   }
-  
-  /* Add slight overlap on submenu */
+
+  /* Add larger overlap on submenu with delay */
   .menu .menu__inner .menu__item.menu__dropdown:hover > .submenu::before {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
-    top: -10px;
-    height: 20px;
+    top: -20px;
+    height: 30px;
     background: transparent;
     pointer-events: auto;
+  }
+
+  /* Add transition delay to prevent dropdown from disappearing too quickly */
+  .menu .menu__inner .menu__item.menu__dropdown > .submenu {
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+
+  .menu .menu__inner .menu__item.menu__dropdown:not(:hover) > .submenu {
+    transition-delay: 0.2s;
   }
 }
 
 @container (min-width: 48rem) {
-  /* Create invisible bridge on menu items */
+  /* Create larger invisible bridge on menu items */
   .menu .menu__inner .menu__item.menu__dropdown::before {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
     top: 100%;
-    height: 20px;
+    height: 30px;
     background: transparent;
     z-index: 41;
     opacity: 0;
     pointer-events: none;
   }
-  
+
   .menu .menu__inner .menu__item.menu__dropdown:hover::before {
     pointer-events: auto;
   }
-  
-  /* Add slight overlap on submenu */
+
+  /* Add larger overlap on submenu with delay */
   .menu .menu__inner .menu__item.menu__dropdown:hover > .submenu::before {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
-    top: -10px;
-    height: 20px;
+    top: -20px;
+    height: 30px;
     background: transparent;
     pointer-events: auto;
+  }
+
+  /* Add transition delay to prevent dropdown from disappearing too quickly */
+  .menu .menu__inner .menu__item.menu__dropdown > .submenu {
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+
+  .menu .menu__inner .menu__item.menu__dropdown:not(:hover) > .submenu {
+    transition-delay: 0.2s;
   }
 }
