@@ -18,15 +18,41 @@ export function CategoryLandingPage({ collection, products, basePath }: Category
   const [showAllProducts, setShowAllProducts] = useState(false)
 
   const initialProductCount = 12
-  // Filter to cell phones only for the Cell Phones collection
-  const phoneOnly = products.filter((p) => {
-    const title = (p.title || "").toLowerCase()
-    const allowed = /iphone|galaxy|pixel|android/.test(title)
-    const excluded = /macbook|airpod|magsafe|charger|watch|ipad/.test(title)
-    return allowed && !excluded
-  })
-  const displayedProducts = showAllProducts ? phoneOnly : phoneOnly.slice(0, initialProductCount)
-  const hasMoreProducts = products.length > initialProductCount
+  const categorySlug = collection.handle || ""
+
+  // Filter products based on category
+  const getFilteredProducts = () => {
+    const title = (p: CommerceProduct) => (p.title || "").toLowerCase()
+
+    switch (categorySlug) {
+      case "cell-phones":
+        return products.filter((p) => {
+          const productTitle = title(p)
+          const allowed = /iphone|galaxy|pixel|android/.test(productTitle)
+          const excluded = /macbook|airpod|magsafe|charger|watch|ipad|imac|mac mini/.test(productTitle)
+          return allowed && !excluded
+        })
+
+      case "computers":
+        return products.filter((p) => {
+          const productTitle = title(p)
+          return /macbook|imac|mac mini|ipad|galaxy tab/.test(productTitle)
+        })
+
+      case "accessories":
+        return products.filter((p) => {
+          const productTitle = title(p)
+          return /airpod|magsafe|charger|watch|case|screen protector/.test(productTitle)
+        })
+
+      default:
+        return products
+    }
+  }
+
+  const filteredProducts = getFilteredProducts()
+  const displayedProducts = showAllProducts ? filteredProducts : filteredProducts.slice(0, initialProductCount)
+  const hasMoreProducts = filteredProducts.length > initialProductCount
 
   return (
     <div className="mx-auto w-full md:max-w-container-md">
@@ -69,11 +95,14 @@ export function CategoryLandingPage({ collection, products, basePath }: Category
       {}
       {products.length > 0 && (
         <div className="py-8">
-          <h2 className="mb-6 text-2xl font-semibold tracking-tight md:text-3xl">Featured Phones</h2>
+          <h2 className="mb-6 text-2xl font-semibold tracking-tight md:text-3xl">
+            {categorySlug === "cell-phones" ? "Featured Phones" : "Featured Products"}
+          </h2>
 
           {}
           <div className="space-y-8">
             {/* Apple iPhones */}
+            {categorySlug === "cell-phones" && (
             <div>
               <h3 className="mb-4 text-xl font-semibold">Apple iPhones</h3>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
@@ -114,11 +143,10 @@ export function CategoryLandingPage({ collection, products, basePath }: Category
                     const seriesProduct = {
                       ...bestProduct,
                       title: `iPhone ${series}${series === "other" ? "" : ""}`,
-                      price: Math.min(...products.map(p => p.price || 0)),
-                      originalPrice: bestProduct.originalPrice,
+                      price: Math.min(...products.map(p => p.minPrice || 0)),
                       id: `iphone-${series}`,
                       images: bestProduct.images,
-                      slug: bestProduct.slug
+                      handle: bestProduct.handle
                     };
 
                     return (
@@ -134,25 +162,113 @@ export function CategoryLandingPage({ collection, products, basePath }: Category
               </div>
               <p className="mt-2 text-sm text-gray-500">* Click any iPhone to see all available models in that series</p>
             </div>
+            )}
+
+            {/* Apple MacBooks */}
+            {categorySlug === "computers" && (
+            <div>
+              <h3 className="mb-4 text-xl font-semibold">Apple MacBooks</h3>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                {displayedProducts
+                  .filter((p) => p.title.toLowerCase().includes("macbook"))
+                  .sort((a, b) => {
+                    // Sort by Pro first, then Air
+                    const aIsPro = a.title.toLowerCase().includes("pro");
+                    const bIsPro = b.title.toLowerCase().includes("pro");
+                    if (aIsPro && !bIsPro) return -1;
+                    if (!aIsPro && bIsPro) return 1;
+
+                    // Within same type, sort by newest chip first
+                    const chipOrder = ["m3", "m2"];
+                    const aChip = chipOrder.find(chip => a.title.toLowerCase().includes(chip));
+                    const bChip = chipOrder.find(chip => b.title.toLowerCase().includes(chip));
+                    if (aChip && bChip) {
+                      return chipOrder.indexOf(aChip) - chipOrder.indexOf(bChip);
+                    }
+
+                    return 0;
+                  })
+                  .map((product, index) => (
+                    <ProductCard key={`${product.id}-${index}`} {...product} className="h-full" prefetch={false} />
+                  ))}
+              </div>
+              <p className="mt-2 text-sm text-gray-500">* Professional-grade laptops with M3 and M2 chips</p>
+            </div>
+            )}
+
+            {/* Apple Computers */}
+            {categorySlug === "computers" && (
+            <div>
+              <h3 className="mb-4 text-xl font-semibold">Apple Computers</h3>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                {displayedProducts
+                  .filter((p) => (p.title.toLowerCase().includes("imac") || p.title.toLowerCase().includes("mac mini")) &&
+                                !p.title.toLowerCase().includes("macbook"))
+                  .sort((a, b) => {
+                    // Sort iMac before Mac Mini
+                    const aIsImac = a.title.toLowerCase().includes("imac");
+                    const bIsImac = b.title.toLowerCase().includes("imac");
+                    if (aIsImac && !bIsImac) return -1;
+                    if (!aIsImac && bIsImac) return 1;
+                    return 0;
+                  })
+                  .map((product, index) => (
+                    <ProductCard key={`${product.id}-${index}`} {...product} className="h-full" prefetch={false} />
+                  ))}
+              </div>
+              <p className="mt-2 text-sm text-gray-500">* All-in-one desktops and compact mini computers</p>
+            </div>
+            )}
+
+            {/* Tablets */}
+            {categorySlug === "computers" && (
+            <div>
+              <h3 className="mb-4 text-xl font-semibold">Tablets</h3>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                {displayedProducts
+                  .filter((p) => p.title.toLowerCase().includes("ipad") || p.title.toLowerCase().includes("galaxy tab"))
+                  .sort((a, b) => {
+                    // Sort iPad Pro first, then regular iPad, then Samsung
+                    const aIsIpadPro = a.title.toLowerCase().includes("ipad pro");
+                    const bIsIpadPro = b.title.toLowerCase().includes("ipad pro");
+                    const aIsIpad = a.title.toLowerCase().includes("ipad") && !a.title.toLowerCase().includes("pro");
+                    const bIsIpad = b.title.toLowerCase().includes("ipad") && !b.title.toLowerCase().includes("pro");
+
+                    if (aIsIpadPro && !bIsIpadPro) return -1;
+                    if (!aIsIpadPro && bIsIpadPro) return 1;
+                    if (aIsIpad && !bIsIpad) return -1;
+                    if (!aIsIpad && bIsIpad) return 1;
+
+                    return 0;
+                  })
+                  .map((product, index) => (
+                    <ProductCard key={`${product.id}-${index}`} {...product} className="h-full" prefetch={false} />
+                  ))}
+              </div>
+              <p className="mt-2 text-sm text-gray-500">* iPad Pro, iPad, and Samsung Galaxy Tab series</p>
+            </div>
+            )}
 
             {/* Android Section */}
+            {categorySlug === "cell-phones" && (
             <div>
               <h3 className="mb-4 text-xl font-semibold">Android</h3>
               <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                 {displayedProducts
                   .filter((p) => !p.title.toLowerCase().includes("iphone"))
-                  .map((product) => (
-                    <ProductCard key={product.id} {...product} className="h-full" prefetch={false} />
+                  .map((product, index) => (
+                    <ProductCard key={`${product.id}-${index}`} {...product} className="h-full" prefetch={false} />
                   ))}
               </div>
             </div>
+            )}
           </div>
 
           {}
           {!showAllProducts && hasMoreProducts && (
             <div className="mt-8 flex justify-center">
               <Button onClick={() => setShowAllProducts(true)} className="w-full md:w-auto">
-                Show More Products ({products.length - initialProductCount} more)
+                Show More Products ({filteredProducts.length - initialProductCount} more)
               </Button>
             </div>
           )}

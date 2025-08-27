@@ -432,12 +432,18 @@ export const getFacetValues = unstable_cache(
 
 export const getProductsByCollectionTag = unstable_cache(
   async (tag: string, limit: number = 10) => {
-    if (isDemoMode()) return getDemoProducts().hits.slice(0, limit)
+    if (isDemoMode()) {
+      const allProducts = getDemoProducts().hits
+      const filteredProducts = allProducts.filter((product: any) =>
+        product.collections?.some((collection: any) => collection.handle === tag)
+      )
+      return filteredProducts.slice(0, limit)
+    }
 
     const { hits } = await algolia.search<CommerceProduct>({
       indexName: algolia.mapIndexToSort(env.ALGOLIA_PRODUCTS_INDEX, "updatedAtTimestamp:desc"),
       searchParams: {
-        filters: algolia.filterBuilder().where("tags", tag).build(),
+        filters: algolia.filterBuilder().where("collections.handle", tag).build(),
         hitsPerPage: limit,
         attributesToRetrieve: [
           "id",

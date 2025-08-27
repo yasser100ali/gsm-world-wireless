@@ -34,11 +34,32 @@ export const navigationItems: NavItem[] = [
     submenu: {
       variant: "text-grid",
       items: [
-        { text: "Laptops", href: "/category/laptops" },
-        { text: "Desktops", href: "/category/desktops" },
-        { text: "Monitors", href: "/category/monitors" },
-        { text: "Tablets", href: "/category/tablets" },
-        { text: "Networking", href: "/category/networking" },
+        {
+          text: "Laptops",
+          href: "/category/laptops",
+          items: [
+            { text: "MacBook Air", href: "/category/macbook-air" },
+            { text: "MacBook Pro", href: "/category/macbook-pro" },
+          ],
+        },
+        {
+          text: "Computers",
+          href: "/category/desktops",
+          items: [
+            { text: "iMac", href: "/category/imac" },
+            { text: "Mac Mini", href: "/category/mac-mini" },
+          ],
+        },
+        {
+          text: "Tablets",
+          href: "/category/tablets",
+          items: [
+            { text: "iPad Pro", href: "/category/ipad-pro" },
+            { text: "iPad", href: "/category/ipad" },
+            { text: "Samsung Galaxy Tab S9", href: "/category/samsung-galaxy-tab-s9" },
+            { text: "Samsung Galaxy Tab S8", href: "/category/samsung-galaxy-tab-s8" },
+          ],
+        },
       ],
     },
   },

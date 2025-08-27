@@ -367,8 +367,8 @@
         "minVariantPrice": { "amount": "1099.00", "currencyCode": "USD" }
       },
       "featuredImage": {
-        "url": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
-        "altText": "MacBook Air M3",
+        "url": "/product-images/macbook-air.jpeg",
+        "altText": "MacBook Air 13-inch M3",
         "width": 1024,
         "height": 1024
       },
@@ -386,7 +386,7 @@
         }
       ],
       "images": [
-        { "url": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8", "altText": "MacBook Air M3", "width": 1024, "height": 1024 }
+        { "url": "/product-images/macbook-air.jpeg", "altText": "MacBook Air 13-inch M3", "width": 1024, "height": 1024 }
       ],
       "collections": [ { "handle": "computers", "title": "Computers" } ]
     },
@@ -404,8 +404,8 @@
         "minVariantPrice": { "amount": "1599.00", "currencyCode": "USD" }
       },
       "featuredImage": {
-        "url": "https://images.unsplash.com/photo-1515859005217-8a1f08870f59",
-        "altText": "MacBook Pro 14 M3",
+        "url": "/product-images/macbook-pro.jpg",
+        "altText": "MacBook Pro 14-inch M3",
         "width": 1024,
         "height": 1024
       },
@@ -423,7 +423,7 @@
         }
       ],
       "images": [
-        { "url": "https://images.unsplash.com/photo-1515859005217-8a1f08870f59", "altText": "MacBook Pro 14 M3", "width": 1024, "height": 1024 }
+        { "url": "/product-images/macbook-pro.jpg", "altText": "MacBook Pro 14-inch M3", "width": 1024, "height": 1024 }
       ],
       "collections": [ { "handle": "computers", "title": "Computers" } ]
     },
@@ -678,6 +678,488 @@
         { "url": "/product-images/iphone_16.jpg", "altText": "iPhone 16", "width": 1024, "height": 1024 }
       ],
       "collections": [ { "handle": "cell-phones", "title": "Cell Phones" } ]
+    },
+    {
+      "id": "macbook-air-m3",
+      "handle": "macbook-air-m3",
+      "title": "Apple MacBook Air 13-inch M3",
+      "vendor": "Apple",
+      "descriptionHtml": "MacBook Air 13-inch with M3 chip, up to 18 hours battery life, and Liquid Retina display.",
+      "totalReviews": 89,
+      "avgRating": 4.8,
+      "reviewsSummary": "Incredible performance in an ultra-thin design.",
+      "priceRange": {
+        "maxVariantPrice": { "amount": "1599.00", "currencyCode": "USD" },
+        "minVariantPrice": { "amount": "1099.00", "currencyCode": "USD" }
+      },
+      "featuredImage": {
+        "url": "/product-images/macbook-air.jpeg",
+        "altText": "MacBook Air 13-inch M3",
+        "width": 1024,
+        "height": 1024
+      },
+      "minPrice": 1099,
+      "variants": [
+        {
+          "id": "macbook-air-m3-8gb-256gb",
+          "title": "8GB RAM / 256GB SSD",
+          "quantityAvailable": 15,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Memory", "value": "8GB" },
+            { "name": "Storage", "value": "256GB SSD" }
+          ],
+          "price": { "amount": "1099.00", "currencyCode": "USD" }
+        },
+        {
+          "id": "macbook-air-m3-8gb-512gb",
+          "title": "8GB RAM / 512GB SSD",
+          "quantityAvailable": 12,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Memory", "value": "8GB" },
+            { "name": "Storage", "value": "512GB SSD" }
+          ],
+          "price": { "amount": "1299.00", "currencyCode": "USD" }
+        }
+      ],
+      "images": [
+        { "url": "/product-images/macbook-air.jpeg", "altText": "MacBook Air 13-inch M3", "width": 1024, "height": 1024 }
+      ],
+      "collections": [ { "handle": "laptops", "title": "Laptops" }, { "handle": "computers", "title": "Computers" } ]
+    },
+    {
+      "id": "macbook-air-m2",
+      "handle": "macbook-air-m2",
+      "title": "Apple MacBook Air 13-inch M2",
+      "vendor": "Apple",
+      "descriptionHtml": "MacBook Air 13-inch with M2 chip, all-day battery life, and stunning Liquid Retina display.",
+      "totalReviews": 124,
+      "avgRating": 4.7,
+      "reviewsSummary": "Perfect balance of power and portability.",
+      "priceRange": {
+        "maxVariantPrice": { "amount": "1399.00", "currencyCode": "USD" },
+        "minVariantPrice": { "amount": "999.00", "currencyCode": "USD" }
+      },
+      "featuredImage": {
+        "url": "/product-images/macbook-air.jpeg",
+        "altText": "MacBook Air 13-inch M2",
+        "width": 1024,
+        "height": 1024
+      },
+      "minPrice": 999,
+      "variants": [
+        {
+          "id": "macbook-air-m2-8gb-256gb",
+          "title": "8GB RAM / 256GB SSD",
+          "quantityAvailable": 18,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Memory", "value": "8GB" },
+            { "name": "Storage", "value": "256GB SSD" }
+          ],
+          "price": { "amount": "999.00", "currencyCode": "USD" }
+        },
+        {
+          "id": "macbook-air-m2-8gb-512gb",
+          "title": "8GB RAM / 512GB SSD",
+          "quantityAvailable": 14,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Memory", "value": "8GB" },
+            { "name": "Storage", "value": "512GB SSD" }
+          ],
+          "price": { "amount": "1199.00", "currencyCode": "USD" }
+        }
+      ],
+      "images": [
+        { "url": "/product-images/macbook-air.jpeg", "altText": "MacBook Air 13-inch M2", "width": 1024, "height": 1024 }
+      ],
+      "collections": [ { "handle": "laptops", "title": "Laptops" }, { "handle": "computers", "title": "Computers" } ]
+    },
+    {
+      "id": "macbook-pro-14-m3",
+      "handle": "macbook-pro-14-m3",
+      "title": "Apple MacBook Pro 14-inch M3",
+      "vendor": "Apple",
+      "descriptionHtml": "MacBook Pro 14-inch with M3 chip, Liquid Retina XDR display, and professional-grade performance.",
+      "totalReviews": 67,
+      "avgRating": 4.9,
+      "reviewsSummary": "The ultimate laptop for creative professionals.",
+      "priceRange": {
+        "maxVariantPrice": { "amount": "2299.00", "currencyCode": "USD" },
+        "minVariantPrice": { "amount": "1799.00", "currencyCode": "USD" }
+      },
+      "featuredImage": {
+        "url": "/product-images/macbook_pro.jpg",
+        "altText": "MacBook Pro 14-inch M3",
+        "width": 1024,
+        "height": 1024
+      },
+      "minPrice": 1799,
+      "variants": [
+        {
+          "id": "macbook-pro-14-m3-16gb-512gb",
+          "title": "16GB RAM / 512GB SSD",
+          "quantityAvailable": 8,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Memory", "value": "16GB" },
+            { "name": "Storage", "value": "512GB SSD" }
+          ],
+          "price": { "amount": "1799.00", "currencyCode": "USD" }
+        },
+        {
+          "id": "macbook-pro-14-m3-24gb-1tb",
+          "title": "24GB RAM / 1TB SSD",
+          "quantityAvailable": 5,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Memory", "value": "24GB" },
+            { "name": "Storage", "value": "1TB SSD" }
+          ],
+          "price": { "amount": "2199.00", "currencyCode": "USD" }
+        }
+      ],
+      "images": [
+        { "url": "/product-images/macbook_pro.jpg", "altText": "MacBook Pro 14-inch M3", "width": 1024, "height": 1024 }
+      ],
+      "collections": [ { "handle": "laptops", "title": "Laptops" }, { "handle": "computers", "title": "Computers" } ]
+    },
+    {
+      "id": "macbook-pro-16-m3",
+      "handle": "macbook-pro-16-m3",
+      "title": "Apple MacBook Pro 16-inch M3",
+      "vendor": "Apple",
+      "descriptionHtml": "MacBook Pro 16-inch with M3 chip, Liquid Retina XDR display, and maximum performance.",
+      "totalReviews": 43,
+      "avgRating": 4.9,
+      "reviewsSummary": "The most powerful MacBook Pro ever created.",
+      "priceRange": {
+        "maxVariantPrice": { "amount": "2999.00", "currencyCode": "USD" },
+        "minVariantPrice": { "amount": "2299.00", "currencyCode": "USD" }
+      },
+      "featuredImage": {
+        "url": "/product-images/macbook_pro.jpg",
+        "altText": "MacBook Pro 16-inch M3",
+        "width": 1024,
+        "height": 1024
+      },
+      "minPrice": 2299,
+      "variants": [
+        {
+          "id": "macbook-pro-16-m3-24gb-512gb",
+          "title": "24GB RAM / 512GB SSD",
+          "quantityAvailable": 6,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Memory", "value": "24GB" },
+            { "name": "Storage", "value": "512GB SSD" }
+          ],
+          "price": { "amount": "2299.00", "currencyCode": "USD" }
+        },
+        {
+          "id": "macbook-pro-16-m3-32gb-1tb",
+          "title": "32GB RAM / 1TB SSD",
+          "quantityAvailable": 4,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Memory", "value": "32GB" },
+            { "name": "Storage", "value": "1TB SSD" }
+          ],
+          "price": { "amount": "2799.00", "currencyCode": "USD" }
+        }
+      ],
+      "images": [
+        { "url": "/product-images/macbook_pro.jpg", "altText": "MacBook Pro 16-inch M3", "width": 1024, "height": 1024 }
+      ],
+      "collections": [ { "handle": "laptops", "title": "Laptops" }, { "handle": "computers", "title": "Computers" } ]
+    },
+    {
+      "id": "imac-24-m3",
+      "handle": "imac-24-m3",
+      "title": "Apple iMac 24-inch M3",
+      "vendor": "Apple",
+      "descriptionHtml": "iMac 24-inch with M3 chip, stunning Retina display, and all-in-one design.",
+      "totalReviews": 56,
+      "avgRating": 4.8,
+      "reviewsSummary": "Beautiful all-in-one desktop with incredible performance.",
+      "priceRange": {
+        "maxVariantPrice": { "amount": "1799.00", "currencyCode": "USD" },
+        "minVariantPrice": { "amount": "1299.00", "currencyCode": "USD" }
+      },
+      "featuredImage": {
+        "url": "/product-images/iMac.jpeg",
+        "altText": "iMac 24-inch M3",
+        "width": 1024,
+        "height": 1024
+      },
+      "minPrice": 1299,
+      "variants": [
+        {
+          "id": "imac-24-m3-8gb-256gb",
+          "title": "8GB RAM / 256GB SSD",
+          "quantityAvailable": 10,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Memory", "value": "8GB" },
+            { "name": "Storage", "value": "256GB SSD" }
+          ],
+          "price": { "amount": "1299.00", "currencyCode": "USD" }
+        },
+        {
+          "id": "imac-24-m3-16gb-512gb",
+          "title": "16GB RAM / 512GB SSD",
+          "quantityAvailable": 7,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Memory", "value": "16GB" },
+            { "name": "Storage", "value": "512GB SSD" }
+          ],
+          "price": { "amount": "1599.00", "currencyCode": "USD" }
+        }
+      ],
+      "images": [
+        { "url": "/product-images/iMac.jpeg", "altText": "iMac 24-inch M3", "width": 1024, "height": 1024 }
+      ],
+      "collections": [ { "handle": "desktops", "title": "Computers" }, { "handle": "computers", "title": "Computers" } ]
+    },
+    {
+      "id": "mac-mini-m2",
+      "handle": "mac-mini-m2",
+      "title": "Apple Mac Mini M4",
+      "vendor": "Apple",
+      "descriptionHtml": "Mac Mini with M2 chip, compact design, and powerful performance in a tiny package.",
+      "totalReviews": 78,
+      "avgRating": 4.7,
+      "reviewsSummary": "Compact power for any setup.",
+      "priceRange": {
+        "maxVariantPrice": { "amount": "799.00", "currencyCode": "USD" },
+        "minVariantPrice": { "amount": "599.00", "currencyCode": "USD" }
+      },
+      "featuredImage": {
+        "url": "/product-images/mac-mini.jpeg",
+        "altText": "Mac Mini M2",
+        "width": 1024,
+        "height": 1024
+      },
+      "minPrice": 599,
+      "variants": [
+        {
+          "id": "mac-mini-m2-8gb-256gb",
+          "title": "8GB RAM / 256GB SSD",
+          "quantityAvailable": 20,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Memory", "value": "8GB" },
+            { "name": "Storage", "value": "256GB SSD" }
+          ],
+          "price": { "amount": "599.00", "currencyCode": "USD" }
+        },
+        {
+          "id": "mac-mini-m2-16gb-512gb",
+          "title": "16GB RAM / 512GB SSD",
+          "quantityAvailable": 12,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Memory", "value": "16GB" },
+            { "name": "Storage", "value": "512GB SSD" }
+          ],
+          "price": { "amount": "799.00", "currencyCode": "USD" }
+        }
+      ],
+      "images": [
+        { "url": "/product-images/mac-mini.jpeg", "altText": "Mac Mini M2", "width": 1024, "height": 1024 }
+      ],
+      "collections": [ { "handle": "desktops", "title": "Computers" }, { "handle": "computers", "title": "Computers" } ]
+    },
+    {
+      "id": "ipad-pro-12-9-m4",
+      "handle": "ipad-pro-12-9-m4",
+      "title": "Apple iPad Pro 12.9-inch M4",
+      "vendor": "Apple",
+      "descriptionHtml": "iPad Pro 12.9-inch with M4 chip, Liquid Retina XDR display, and Apple Pencil Pro support.",
+      "totalReviews": 92,
+      "avgRating": 4.8,
+      "reviewsSummary": "The most advanced iPad ever created.",
+      "priceRange": {
+        "maxVariantPrice": { "amount": "1499.00", "currencyCode": "USD" },
+        "minVariantPrice": { "amount": "1099.00", "currencyCode": "USD" }
+      },
+      "featuredImage": {
+        "url": "/product-images/ipad_pro_m4.jpg",
+        "altText": "iPad Pro 12.9-inch M4",
+        "width": 1024,
+        "height": 1024
+      },
+      "minPrice": 1099,
+      "variants": [
+        {
+          "id": "ipad-pro-12-9-m4-256gb",
+          "title": "256GB Storage",
+          "quantityAvailable": 15,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Storage", "value": "256GB" }
+          ],
+          "price": { "amount": "1099.00", "currencyCode": "USD" }
+        },
+        {
+          "id": "ipad-pro-12-9-m4-512gb",
+          "title": "512GB Storage",
+          "quantityAvailable": 10,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Storage", "value": "512GB" }
+          ],
+          "price": { "amount": "1299.00", "currencyCode": "USD" }
+        }
+      ],
+      "images": [
+        { "url": "/product-images/ipad_pro_m4.jpg", "altText": "iPad Pro 12.9-inch M4", "width": 1024, "height": 1024 }
+      ],
+      "collections": [ { "handle": "tablets", "title": "Tablets" }, { "handle": "computers", "title": "Computers" } ]
+    },
+    {
+      "id": "ipad-10-9-m2",
+      "handle": "ipad-10-9-m2",
+      "title": "Apple iPad 10.9-inch M2",
+      "vendor": "Apple",
+      "descriptionHtml": "iPad 10.9-inch with M2 chip, Liquid Retina display, and all-day battery life.",
+      "totalReviews": 134,
+      "avgRating": 4.7,
+      "reviewsSummary": "Perfect tablet for work and creativity.",
+      "priceRange": {
+        "maxVariantPrice": { "amount": "699.00", "currencyCode": "USD" },
+        "minVariantPrice": { "amount": "499.00", "currencyCode": "USD" }
+      },
+      "featuredImage": {
+        "url": "/product-images/ipad-base.jpg",
+        "altText": "iPad 10.9-inch M2",
+        "width": 1024,
+        "height": 1024
+      },
+      "minPrice": 499,
+      "variants": [
+        {
+          "id": "ipad-10-9-m2-64gb",
+          "title": "64GB Storage",
+          "quantityAvailable": 25,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Storage", "value": "64GB" }
+          ],
+          "price": { "amount": "499.00", "currencyCode": "USD" }
+        },
+        {
+          "id": "ipad-10-9-m2-256gb",
+          "title": "256GB Storage",
+          "quantityAvailable": 18,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Storage", "value": "256GB" }
+          ],
+          "price": { "amount": "649.00", "currencyCode": "USD" }
+        }
+      ],
+      "images": [
+        { "url": "/product-images/ipad-base.jpg", "altText": "iPad 10.9-inch M2", "width": 1024, "height": 1024 }
+      ],
+      "collections": [ { "handle": "tablets", "title": "Tablets" }, { "handle": "computers", "title": "Computers" } ]
+    },
+    {
+      "id": "samsung-galaxy-tab-s9",
+      "handle": "samsung-galaxy-tab-s9",
+      "title": "Samsung Galaxy Tab S9 11-inch",
+      "vendor": "Samsung",
+      "descriptionHtml": "Galaxy Tab S9 11-inch with Snapdragon 8 Gen 2, S Pen included, and IP68 water resistance.",
+      "totalReviews": 67,
+      "avgRating": 4.6,
+      "reviewsSummary": "Powerful Android tablet with premium features.",
+      "priceRange": {
+        "maxVariantPrice": { "amount": "899.00", "currencyCode": "USD" },
+        "minVariantPrice": { "amount": "699.00", "currencyCode": "USD" }
+      },
+      "featuredImage": {
+        "url": "/product-images/samsung-tablet-s10-plus.jpg",
+        "altText": "Samsung Galaxy Tab S9",
+        "width": 1024,
+        "height": 1024
+      },
+      "minPrice": 699,
+      "variants": [
+        {
+          "id": "samsung-tab-s9-128gb",
+          "title": "128GB Storage",
+          "quantityAvailable": 14,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Storage", "value": "128GB" }
+          ],
+          "price": { "amount": "699.00", "currencyCode": "USD" }
+        },
+        {
+          "id": "samsung-tab-s9-256gb",
+          "title": "256GB Storage",
+          "quantityAvailable": 10,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Storage", "value": "256GB" }
+          ],
+          "price": { "amount": "799.00", "currencyCode": "USD" }
+        }
+      ],
+      "images": [
+        { "url": "/product-images/samsung-tablet-s10-plus.jpg", "altText": "Samsung Galaxy Tab S9", "width": 1024, "height": 1024 }
+      ],
+      "collections": [ { "handle": "tablets", "title": "Tablets" }, { "handle": "computers", "title": "Computers" } ]
+    },
+    {
+      "id": "samsung-galaxy-tab-s8",
+      "handle": "samsung-galaxy-tab-s8",
+      "title": "Samsung Galaxy Tab S8 11-inch",
+      "vendor": "Samsung",
+      "descriptionHtml": "Galaxy Tab S8 11-inch with Snapdragon 8 Gen 1, S Pen included, and premium build quality.",
+      "totalReviews": 89,
+      "avgRating": 4.5,
+      "reviewsSummary": "Excellent Android tablet with great performance.",
+      "priceRange": {
+        "maxVariantPrice": { "amount": "699.00", "currencyCode": "USD" },
+        "minVariantPrice": { "amount": "499.00", "currencyCode": "USD" }
+      },
+      "featuredImage": {
+        "url": "/product-images/samsung-tablet-s10-plus.jpg",
+        "altText": "Samsung Galaxy Tab S8",
+        "width": 1024,
+        "height": 1024
+      },
+      "minPrice": 499,
+      "variants": [
+        {
+          "id": "samsung-tab-s8-128gb",
+          "title": "128GB Storage",
+          "quantityAvailable": 16,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Storage", "value": "128GB" }
+          ],
+          "price": { "amount": "499.00", "currencyCode": "USD" }
+        },
+        {
+          "id": "samsung-tab-s8-256gb",
+          "title": "256GB Storage",
+          "quantityAvailable": 12,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Storage", "value": "256GB" }
+          ],
+          "price": { "amount": "599.00", "currencyCode": "USD" }
+        }
+      ],
+      "images": [
+        { "url": "/product-images/samsung-tablet-s10-plus.jpg", "altText": "Samsung Galaxy Tab S8", "width": 1024, "height": 1024 }
+      ],
+      "collections": [ { "handle": "tablets", "title": "Tablets" }, { "handle": "computers", "title": "Computers" } ]
     }
   ]
 }

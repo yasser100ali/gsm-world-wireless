@@ -76,7 +76,7 @@ GSM World Wireless is a modern, enterprise-grade e-commerce platform designed sp
 - Shopify store with Admin API access
 - Algolia account with search indices
 
-### Installation
+### Installation 
 
 1. **Clone the repository**
 
