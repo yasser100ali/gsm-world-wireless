@@ -2,6 +2,9 @@ import type { Hit } from "algoliasearch"
 import type { Review } from "lib/reviews/types"
 import type { PlatformCollection } from "lib/shopify/types"
 import type { CommerceProduct } from "types"
+import merchandiseData from "../public/merchandise-data.json"
+import categoriesData from "../public/demo-categories-data.json"
+import reviewsData from "../public/demo-product-reviews-data.json"
 
 export function getDemoProducts(): {
   hits: Hit<CommerceProduct>[]
@@ -10,12 +13,11 @@ export function getDemoProducts(): {
   totalHits: number
   independentFacetDistribution: Record<string, unknown>
 } {
-  const allProducts = require("public/merchandise-data.json")
   return {
-    hits: allProducts.hits as Hit<CommerceProduct>[],
+    hits: merchandiseData.hits as Hit<CommerceProduct>[],
     totalPages: 1,
     facetDistribution: {},
-    totalHits: allProducts.hits.length,
+    totalHits: merchandiseData.hits.length,
     independentFacetDistribution: {},
   }
 }
@@ -25,13 +27,11 @@ export function getDemoSingleProduct(handle: string) {
 }
 
 export function getDemoCategories() {
-  const allCategories = require("public/demo-categories-data.json")
-
   return {
-    hits: allCategories as Hit<PlatformCollection>[],
+    hits: categoriesData as Hit<PlatformCollection>[],
     totalPages: 1,
     facetDistribution: {},
-    totalHits: allCategories.length,
+    totalHits: categoriesData.length,
     independentFacetDistribution: {},
   }
 }
@@ -41,7 +41,7 @@ export function getDemoSingleCategory(handle: string) {
 }
 
 export function getDemoProductReviews() {
-  return require("public/demo-product-reviews-data.json") as { reviews: Review[]; total: number }
+  return reviewsData as { reviews: Review[]; total: number }
 }
 
 export function isDemoMode(): boolean {

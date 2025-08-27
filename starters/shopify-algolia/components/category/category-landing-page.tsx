@@ -73,16 +73,66 @@ export function CategoryLandingPage({ collection, products, basePath }: Category
 
           {}
           <div className="space-y-8">
-            {/* iPhones Section */}
+            {/* Apple iPhones */}
             <div>
-              <h3 className="mb-4 text-xl font-semibold">iPhones</h3>
-              <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                {displayedProducts
-                  .filter((p) => p.title.toLowerCase().includes("iphone"))
-                  .map((product) => (
-                    <ProductCard key={product.id} {...product} className="h-full" prefetch={false} />
-                  ))}
+              <h3 className="mb-4 text-xl font-semibold">Apple iPhones</h3>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                {(() => {
+                  // Group iPhones by series and get the first/best product from each series
+                  const iphoneGroups: { [key: string]: CommerceProduct[] } = {};
+
+                  displayedProducts
+                    .filter((p) => p.title.toLowerCase().includes("iphone"))
+                    .forEach((product) => {
+                      const seriesMatch = product.title.toLowerCase().match(/iphone (\d+)/);
+                      const series = seriesMatch ? seriesMatch[1] : "other";
+
+                      if (!iphoneGroups[series]) {
+                        iphoneGroups[series] = [];
+                      }
+                      iphoneGroups[series].push(product);
+                    });
+
+                  // Sort series by newest first, then get the best product from each series
+                  const seriesOrder = ["16", "15", "14", "13", "other"];
+                  const sortedSeries = Object.keys(iphoneGroups).sort((a, b) => {
+                    const aIndex = seriesOrder.indexOf(a);
+                    const bIndex = seriesOrder.indexOf(b);
+                    return (aIndex === -1 ? seriesOrder.length : aIndex) - (bIndex === -1 ? seriesOrder.length : bIndex);
+                  });
+
+
+
+                  return sortedSeries.map((series) => {
+                    const products = iphoneGroups[series];
+                    // Get the Pro Max if available, otherwise Pro, otherwise the first one
+                    const bestProduct = products.find(p => p.title.toLowerCase().includes("pro max")) ||
+                                      products.find(p => p.title.toLowerCase().includes("pro")) ||
+                                      products[0];
+
+                    // Create a custom product card that represents the whole series
+                    const seriesProduct = {
+                      ...bestProduct,
+                      title: `iPhone ${series}${series === "other" ? "" : ""}`,
+                      price: Math.min(...products.map(p => p.price || 0)),
+                      originalPrice: bestProduct.originalPrice,
+                      id: `iphone-${series}`,
+                      images: bestProduct.images,
+                      slug: bestProduct.slug
+                    };
+
+                    return (
+                      <div key={series} className="relative">
+                        <ProductCard {...seriesProduct} className="h-full" prefetch={false} />
+                        <div className="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded-full">
+                          {products.length} models
+                        </div>
+                      </div>
+                    );
+                  });
+                })()}
               </div>
+              <p className="mt-2 text-sm text-gray-500">* Click any iPhone to see all available models in that series</p>
             </div>
 
             {/* Android Section */}

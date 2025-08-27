@@ -531,6 +531,153 @@
         { "url": "https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb", "altText": "MagSafe Charger", "width": 1024, "height": 1024 }
       ],
       "collections": [ { "handle": "accessories", "title": "Accessories" } ]
+    },
+    {
+      "id": "iphone-16-pro-max",
+      "handle": "iphone-16-pro-max",
+      "title": "Apple iPhone 16 Pro Max",
+      "vendor": "Apple",
+      "descriptionHtml": "iPhone 16 Pro Max with A18 Pro chip, titanium design, and advanced camera system.",
+      "totalReviews": 28,
+      "avgRating": 4.8,
+      "reviewsSummary": "Largest iPhone with incredible camera and performance.",
+      "priceRange": {
+        "maxVariantPrice": { "amount": "1599.00", "currencyCode": "USD" },
+        "minVariantPrice": { "amount": "1199.00", "currencyCode": "USD" }
+      },
+      "featuredImage": {
+        "url": "/product-images/iphone_16.jpg",
+        "altText": "iPhone 16 Pro Max",
+        "width": 1024,
+        "height": 1024
+      },
+      "minPrice": 1199,
+      "variants": [
+        {
+          "id": "iphone-16-pro-max-black-256",
+          "title": "Black Titanium / 256GB",
+          "quantityAvailable": 18,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Color", "value": "Black Titanium" },
+            { "name": "Storage", "value": "256GB" }
+          ],
+          "price": { "amount": "1199.00", "currencyCode": "USD" }
+        },
+        {
+          "id": "iphone-16-pro-max-white-512",
+          "title": "White Titanium / 512GB",
+          "quantityAvailable": 12,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Color", "value": "White Titanium" },
+            { "name": "Storage", "value": "512GB" }
+          ],
+          "price": { "amount": "1399.00", "currencyCode": "USD" }
+        }
+      ],
+      "images": [
+        { "url": "/product-images/iphone_16.jpg", "altText": "iPhone 16 Pro Max", "width": 1024, "height": 1024 }
+      ],
+      "collections": [ { "handle": "cell-phones", "title": "Cell Phones" } ]
+    },
+    {
+      "id": "iphone-16-pro",
+      "handle": "iphone-16-pro",
+      "title": "Apple iPhone 16 Pro",
+      "vendor": "Apple",
+      "descriptionHtml": "iPhone 16 Pro with A18 Pro chip, titanium design, and advanced camera system.",
+      "totalReviews": 35,
+      "avgRating": 4.9,
+      "reviewsSummary": "Perfect size with pro features and titanium build.",
+      "priceRange": {
+        "maxVariantPrice": { "amount": "1399.00", "currencyCode": "USD" },
+        "minVariantPrice": { "amount": "1099.00", "currencyCode": "USD" }
+      },
+      "featuredImage": {
+        "url": "/product-images/iphone_16.jpg",
+        "altText": "iPhone 16 Pro",
+        "width": 1024,
+        "height": 1024
+      },
+      "minPrice": 1099,
+      "variants": [
+        {
+          "id": "iphone-16-pro-black-128",
+          "title": "Black Titanium / 128GB",
+          "quantityAvailable": 22,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Color", "value": "Black Titanium" },
+            { "name": "Storage", "value": "128GB" }
+          ],
+          "price": { "amount": "1099.00", "currencyCode": "USD" }
+        },
+        {
+          "id": "iphone-16-pro-blue-256",
+          "title": "Blue Titanium / 256GB",
+          "quantityAvailable": 15,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Color", "value": "Blue Titanium" },
+            { "name": "Storage", "value": "256GB" }
+          ],
+          "price": { "amount": "1199.00", "currencyCode": "USD" }
+        }
+      ],
+      "images": [
+        { "url": "/product-images/iphone_16.jpg", "altText": "iPhone 16 Pro", "width": 1024, "height": 1024 }
+      ],
+      "collections": [ { "handle": "cell-phones", "title": "Cell Phones" } ]
+    },
+    {
+      "id": "iphone-16",
+      "handle": "iphone-16",
+      "title": "Apple iPhone 16",
+      "vendor": "Apple",
+      "descriptionHtml": "iPhone 16 with A18 chip, advanced camera system, and all-day battery life.",
+      "totalReviews": 42,
+      "avgRating": 4.7,
+      "reviewsSummary": "Great value with all the essential features.",
+      "priceRange": {
+        "maxVariantPrice": { "amount": "1099.00", "currencyCode": "USD" },
+        "minVariantPrice": { "amount": "899.00", "currencyCode": "USD" }
+      },
+      "featuredImage": {
+        "url": "/product-images/iphone_16.jpg",
+        "altText": "iPhone 16",
+        "width": 1024,
+        "height": 1024
+      },
+      "minPrice": 899,
+      "variants": [
+        {
+          "id": "iphone-16-black-128",
+          "title": "Black / 128GB",
+          "quantityAvailable": 28,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Color", "value": "Black" },
+            { "name": "Storage", "value": "128GB" }
+          ],
+          "price": { "amount": "899.00", "currencyCode": "USD" }
+        },
+        {
+          "id": "iphone-16-blue-256",
+          "title": "Blue / 256GB",
+          "quantityAvailable": 20,
+          "availableForSale": true,
+          "selectedOptions": [
+            { "name": "Color", "value": "Blue" },
+            { "name": "Storage", "value": "256GB" }
+          ],
+          "price": { "amount": "999.00", "currencyCode": "USD" }
+        }
+      ],
+      "images": [
+        { "url": "/product-images/iphone_16.jpg", "altText": "iPhone 16", "width": 1024, "height": 1024 }
+      ],
+      "collections": [ { "handle": "cell-phones", "title": "Cell Phones" } ]
     }
   ]
 }
