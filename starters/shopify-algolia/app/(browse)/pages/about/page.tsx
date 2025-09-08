@@ -6,7 +6,7 @@ export default function AboutPage() {
 
         <div className="mt-8 space-y-6 text-xl text-muted-foreground">
           <p>
-            Founded in 2008 by brothers Yousuf and Asif Ali, GSM World USA is the dominant wholesaler of
+            Founded in 2008, GSM World USA is the dominant wholesaler of
             iPhones and Androids—both new and used—in the Southern California region.
           </p>
           <p>
