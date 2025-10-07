@@ -17,6 +17,17 @@ interface HeroConfigItem {
 
 const heroConfig: HeroConfigItem[] = [
   {
+    id: "iphone-17",
+    imageUrl: "/product-images/iphone-17.jpeg",
+    imageAlt: "iPhone 17",
+    title: "Discover the iPhone 17",
+    subtitle: "The latest innovation in smartphone technology",
+    ctaText: "Shop smartphones",
+    ctaHref: "/category/cell-phones",
+    productHandle: "iphone-15-pro",
+    variantOptions: {},
+  },
+  {
     id: "iphone",
     imageUrl: "/product-images/iphone_16.jpg",
     imageAlt: "Latest iPhone",

@@ -101,6 +101,30 @@ export function CategoryLandingPage({ collection, products, basePath }: Category
 
           {}
           <div className="space-y-8">
+            {/* Featured iPhone 17 */}
+            {categorySlug === "cell-phones" && (
+            <div className="mb-8">
+              <h3 className="mb-4 text-xl font-semibold">Featured iPhone</h3>
+              <div className="relative overflow-hidden rounded-lg bg-gradient-to-r from-orange-50 to-orange-100 p-6 shadow-lg">
+                <div className="flex items-center gap-6">
+                  <div className="relative h-32 w-32 flex-shrink-0 overflow-hidden rounded-lg bg-white shadow-md">
+                    <Image
+                      src="/product-images/iphone-17.jpeg"
+                      alt="iPhone 17"
+                      fill
+                      className="object-cover"
+                      sizes="128px"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-2xl font-bold text-gray-900">iPhone 17</h4>
+                    <p className="mt-1 text-gray-600">Now carrying the latest iPhone 17, Air and 17 Pro</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            )}
+
             {/* Apple iPhones */}
             {categorySlug === "cell-phones" && (
             <div>
@@ -123,7 +147,7 @@ export function CategoryLandingPage({ collection, products, basePath }: Category
                     });
 
                   // Sort series by newest first, then get the best product from each series
-                  const seriesOrder = ["16", "15", "14", "13", "other"];
+                  const seriesOrder = ["17", "16", "15", "14", "13", "other"];
                   const sortedSeries = Object.keys(iphoneGroups).sort((a, b) => {
                     const aIndex = seriesOrder.indexOf(a);
                     const bIndex = seriesOrder.indexOf(b);
